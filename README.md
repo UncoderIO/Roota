@@ -15,13 +15,13 @@ RootA is a public-domain language of threat detection and response that combines
 ## Getting Started
 
 ## RootA Specification
-The specification of the RootA is here [RootA Specfication.](/RootA_Specification.md)
+The specification of the RootA is here [RootA Specification.](/RootA_Specification.md)
 
 ## Questions and Feedback
 Please submit issues for any technical questions or suggestions to support@socprime.com.
-Also see the guidance for contributors if are you interested in contributing or simply reporting issues.
+Also, see the guidance for contributors if you are interested in contributing or simply reporting issues.
 
-## How do I contribute?
+## How to contribute?
 TDB
 
 ## Credits
