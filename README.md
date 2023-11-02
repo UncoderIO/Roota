@@ -118,7 +118,7 @@ response:
 ```
 
 ### Fields
-[This specification](#RootA_Specification.md) includes the list of all fields that can be used to write a RootA rule.
+[This specification](https://github.com/UncoderIO/RootA/blob/main/RootA_Specification.md) includes the list of all fields that can be used to write a RootA rule.
 
 ## How to Contribute
 Thank you for your interest in the RootA open-source project! Your contribution really matters in evolving the project and helping us make the RootA language even more useful for the global cyber defender community.
