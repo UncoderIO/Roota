@@ -139,7 +139,7 @@ To submit your pull request with your ideas or suggestions for changes, take the
 Thank you for your contribution to the RootA project!
 
 ## Questions & Feedback
-Please submit your technical feedback and suggestions to support@socprime.com or a RootA channel in [SOC Prime’s Discord](https://discord.gg/socprime). Also, refer to the guidance for contributors to support the RootA project or simply report issues.
+Please submit your technical feedback and suggestions to support@socprime.com or a RootA channel in [SOC Prime’s Discord](https://tdm.socprime.com/zeptolink/5IAokHui2iWUHaB8/). Also, refer to the guidance for contributors to support the RootA project or simply report issues.
 
 ## Maintainers
 Driving the idea of establishing a unified language and toolkit for threat detection and response since 2015, SOC Prime team has developed RootA from the ground up, with major contributions to the project made by:
@@ -156,7 +156,8 @@ The contents of this repo, along with RootA specifications, are in the public do
 
 ## Resources & Useful Links
 [RootA.IO](https://roota.io/) - the main website page of the single language for threat detection & response  
+[RootA Discord Channel](https://tdm.socprime.com/zeptolink/5IAokHui2iWUHaB8/) - join Discord channel to network with RootA enthusiasts
 [Uncoder.IO](https://uncoder.io/) - free online translation engine for RootA, Sigma, and IOC-based queries  
 [Uncoder AI](https://tdm.socprime.com/uncoder-ai) - SaaS version of Uncoder acting as advanced IDE for detection engineering  
 [SOC Prime Platform](https://tdm.socprime.com/login) - the industry-first platform for collective cyber defense  
-[About SOC Prime](https://socprime.com/) 
+[About SOC Prime](https://socprime.com/) - learn more about SOC Prime and its mission 
