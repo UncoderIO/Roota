@@ -2,6 +2,14 @@
 # Welcome to RootA
 Welcome to the RootA repository, a place that connects cybersecurity enthusiasts who are eager to collaborate on RootA rules and help evolve RootA as a single language for threat detection and response. Despite all cyber defenders having a common goal, they tend to speak different languages. Driven by a common mission to bridge this gap and foster collective cyber defense, we’ve created this open-source RootA project.
 
+**Table Of Contents:**
+
+- [What Is RootA](#what_is_roota)
+- [Why RootA](#why_roota)
+- [Writing RootA Rules](#writing_roota_rules)
+- [RootA Rule Templates](#rootA_rule_templates)
+- [How to Contribute](#how-do-i-contribute)
+  
 # What Is RootA
 RootA is a public-domain language for collective cyber defence, created to make threat detection, incident response, and actor attribution simple. It acts as an open-source wrapper on top of most of the existing SIEM, EDR, XDR, and Data Lake query languages. If you learn the basics of RootA, you will be able to contribute to collective defence. And if you have mastered a specific SIEM language, with RootA and Uncoder.IO you can speak them all.
 
@@ -38,10 +46,9 @@ RootA is designed with broad customization opportunities. Use the RootA minimal 
 
 RootA is meant to be a highly flexible format with only two required fields: `name` and `detection`. All other fields are optional. 
 
-## RootA Rule Template
+## RootA Rule Templates
 You can get started by using one of the available rule templates, including full, short, or minimum based on your current needs. 
 
-[Full, Short, Minimal]
 ### Minimal RootA rule example:
 ```
 name: Possible Credential Dumping using comsvcs.dll
@@ -96,7 +103,7 @@ logsource:
     enable: 'Computer Configuration -> Windows Settings -> Security Settings -> Advanced Audit Policy Configuration -> System Audit Policies -> Detailed Tracking -> Audit Process 
 detection:
     language: splunk
-    schema: default #ocsf, ecs # <-------------------- OPTIONAL?
+    schema: cim
     body: index=* source="WinEventLog:*" AND (Image="*.exe" OR Image="*.com" OR Image="*.scr")
 response:
     #actions:
