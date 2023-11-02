@@ -91,9 +91,8 @@ class: campaign
 severity: medium
 date: 01-01-2023
 timeline:
-    01-01-2023: Ducktail, MerlinAgent
-    04-02-2023: Lazarus
-    06-03-2023: cve-2023-1337, Ducktail
+    2023-01-01 - 2023-03-06: Ducktail, MerlinAgent
+    2023-02-04: Lazarus
 mitre-attack: t1136.003, t1087.004, t1069
 tags: MerlinAgent, UAC-0173, UAC-0006, Ducktail, CERT-UA#4753, CERT-UA#5909, CERT-UA#7183
 references:
@@ -105,7 +104,7 @@ logsource:
     product: windows
     category: process_creation
     source: Windows Security Event Log
-    enable: 'Computer Configuration -> Windows Settings -> Security Settings -> Advanced Audit Policy Configuration -> System Audit Policies -> Detailed Tracking -> Audit Process 
+    enable: Computer Configuration -> Windows Settings -> Security Settings -> Advanced Audit Policy Configuration -> System Audit Policies -> Detailed Tracking -> Audit Process
 detection:
     language: splunk
     schema: cim
@@ -119,14 +118,14 @@ response:
 ```
 
 ### Fields
-[This specification](local url) includes the list of all fields that can be used to write a RootA rule.
+[This specification](#RootA_Specification.md) includes the list of all fields that can be used to write a RootA rule.
 
 ## How to Contribute
 Thank you for your interest in the RootA open-source project! Your contribution really matters in evolving the project and helping us make the RootA language even more useful for the global cyber defender community.
 
 To submit your pull request with your ideas or suggestions for changes, take the following steps:
 
-1. Fork the [RootA repository](#) and clone your fork to your local environment.
+1. Fork the [RootA repository](https://github.com/UncoderIO/RootA/tree/main) and clone your fork to your local environment.
 2. Create a new feature branch in which you’re going to make your changes.
 3. Then commit your changes to your newly created feature branch.
 4. Push the changes to your fork.
@@ -139,7 +138,7 @@ To submit your pull request with your ideas or suggestions for changes, take the
 Thank you for your contribution to the RootA project!
 
 ## Questions & Feedback
-Please submit your technical feedback and suggestions to support@socprime.com or a RootA channel in [SOC Prime’s Discord](https://tdm.socprime.com/zeptolink/5IAokHui2iWUHaB8/). Also, refer to the guidance for contributors to support the RootA project or simply report issues.
+Please submit your technical feedback and suggestions to support@socprime.com or a **RootA** channel in [SOC Prime’s Discord](https://tdm.socprime.com/zeptolink/5IAokHui2iWUHaB8/). Also, refer to the guidance for contributors to support the RootA project or simply report issues.
 
 ## Maintainers
 Driving the idea of establishing a unified language and toolkit for threat detection and response since 2015, SOC Prime team has developed RootA from the ground up, with major contributions to the project made by:
