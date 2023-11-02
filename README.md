@@ -1,6 +1,6 @@
 ![Logo](images/roota_logo.png)
 # Welcome to RootA
-Welcome to the RootA repository, a place that connects cybersecurity enthusiasts who are eager to collaborate on RootA rules and help evolve RootA as a single language for threat detection and response. Despite all cyber defenders having a common goal, they tend to speak different languages. Driven by a common mission to bridge this gap and foster collective cyber defense, we’ve created this open-source RootA project.
+Welcome to the RootA repository, a place that connects cybersecurity enthusiasts who are eager to collaborate on RootA rules and help evolve RootA as an open-source language for collective cyber defense. Despite all cyber defenders having a common goal, they tend to speak different languages. Driven by a common mission to bridge this gap and foster collective cyber defense, we’ve created this open-source RootA project.
 
 **Table Of Contents:**
 
@@ -11,7 +11,7 @@ Welcome to the RootA repository, a place that connects cybersecurity enthusiasts
 - [How to Contribute](#how-do-i-contribute)
   
 # What Is RootA
-RootA is a public-domain language for collective cyber defence, created to make threat detection, incident response, and actor attribution simple. It acts as an open-source wrapper on top of most of the existing SIEM, EDR, XDR, and Data Lake query languages. If you learn the basics of RootA, you will be able to contribute to collective defence. And if you have mastered a specific SIEM language, with RootA and Uncoder.IO you can speak them all.
+RootA is a public-domain language for collective cyber defense, created to make threat detection, incident response, and actor attribution simple. It acts as an open-source wrapper on top of most of the existing SIEM, EDR, XDR, and Data Lake query languages. If you learn the basics of RootA, you will be able to contribute to collective defense. And if you have mastered a specific SIEM language, with RootA and Uncoder.IO you can speak them all.
 
 # Why RootA
 The objective of RootA is to accelerate the global cyber industry collaboration. You can easily start performing Detection Engineering tasks, having any background in writing SIEM or EDR detection rules. Alternatively, if you are good with generic languages like Sigma or Yara, then RootA will look like the next logical step forward.
@@ -33,7 +33,7 @@ RootA includes fields to define relevant cyber threat intelligence and metadata 
 - **Author and license.** Writing a rule requires a great deal of effort and expertise. Ensure the credit is on the right person and define the license for use.
 - **Details.** Well, that's where the devil is. Describe how the detection logic works and provide anything that may be useful to understand the code or use it properly.
 - **Response.** Define response recommendations for cases where the detection produces hits. Refer to best practices or provide specific instructions.
-
+  
 ## Community Collaboration
 - **Use Case Documentation.** Relying on the RootA language, cyber defenders can seamlessly document and share their threat research in a universal format describing the whole use case enriched with CTI, ATT&CK tagging, and other relevant fields.
 - **Knowledge Sharing.** RootA enables defenders to share vendor-agnostic use cases enriched with comprehensive metadata rather than mere detection logic to foster global information exchange among industry peers.
@@ -121,7 +121,7 @@ Thank you for your interest in the RootA open-source project! Your contribution 
 
 To submit your pull request with your ideas or suggestions for changes, take the following steps:
 
-1. Fork the [RootA repository](local url) and clone your fork to your local environment.
+1. Fork the [RootA repository](#) and clone your fork to your local environment.
 2. Create a new feature branch in which you’re going to make your changes.
 3. Then commit your changes to your newly created feature branch.
 4. Push the changes to your fork.
@@ -134,10 +134,10 @@ To submit your pull request with your ideas or suggestions for changes, take the
 Thank you for your contribution to the RootA project!
 
 ## Questions & Feedback
-Please submit your technical feedback and suggestions to support@socprime.com or a [dedicated channel](full url) in SOC Prime’s Discord. Also, refer to the guidance for contributors to support the RootA project or simply report issues.
+Please submit your technical feedback and suggestions to support@socprime.com or a RootA channel in [SOC Prime’s Discord](https://discord.gg/socprime). Also, refer to the guidance for contributors to support the RootA project or simply report issues.
 
 ## Maintainers
-Driving the idea of one common language for threat detection & response since 2016, SOC Prime team has developed RootA from the ground up, with major contributions to the project made by:
+Driving the idea of establishing a unified language and toolkit for threat detection and response since 2015, the SOC Prime team has developed RootA from the ground up, with major contributions to the project made by:
 - Roman Ranskyi
 - Alex Bredikhin
 - Ruslan Mikhalov
