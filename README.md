@@ -1,4 +1,4 @@
-![Logo](.readme/logo.png)
+![Logo](.images/roota_logo.png)
 # Welcome to RootA
 Welcome to the RootA repository, a place that connects cybersecurity enthusiasts who are eager to collaborate on RootA rules and help evolve RootA as a single language for threat detection and response. Despite all cyber defenders having a common goal, they tend to speak different languages. Driven by a common mission to bridge this gap and foster collective cyber defense, we’ve created this open-source RootA project.
 
@@ -41,7 +41,70 @@ RootA is meant to be a highly flexible format with only two required fields: `na
 ## RootA Rule Template
 You can get started by using one of the available rule templates, including full, short, or minimum based on your current needs. 
 
-[Full, Short, Minimal templates from Confluence]
+[Full, Short, Minimal]
+### Minimal RootA rule example:
+```
+name: Possible Credential Dumping using comsvcs.dll
+detection:
+    language: splunk 
+    body: index=* source="WinEventLog:*" AND (Image="*.exe" OR Image="*.com" OR Image="*.scr")
+```
+### Short RootA rule example:
+```
+name: Possible Credential Dumping using comsvcs.dll
+details: Adversaries can use built-in library comsvcs.dll to dump credentials on a compromised host.
+author: SOC Prime Team
+severity: medium
+references:
+    - https://blog.talosintelligence.com/2022/08/recent-cyber-attack.html
+    - https://lolbas-project.github.io/lolbas/Binaries/msedgewebview2/
+logsource:
+    vendor: microsoft
+    product: windows
+    category: process_creation
+detection:
+    language: splunk
+    body: index=* source="WinEventLog:*" AND (Image="*.exe" OR Image="*.com" OR Image="*.scr")
+```
+### Full RootA rule example:
+```
+name: Possible Credential Dumping using comsvcs.dll
+uuid: 009a001b-1623-4320-8369-95bf0d651e8e
+details: Adversaries can use the built-in library comsvcs.dll to dump credentials on a compromised host.
+author: SOC Prime Team, SOC Prime Team2
+version: 0.1
+license: DRL 1.1
+type: query
+class: campaign 
+severity: medium
+date: 01-01-2023
+timeline:
+    01-01-2023: Ducktail, MerlinAgent
+    04-02-2023: Lazarus
+    06-03-2023: cve-2023-1337, Ducktail
+mitre-attack: t1136.003, t1087.004, t1069
+tags: MerlinAgent, UAC-0173, UAC-0006, Ducktail, CERT-UA#4753, CERT-UA#5909, CERT-UA#7183
+references:
+    - https://blog.talosintelligence.com/2022/08/recent-cyber-attack.html
+    - https://lolbas-project.github.io/lolbas/Binaries/msedgewebview2/
+logsource:
+    layer: host
+    vendor: microsoft
+    product: windows
+    category: process_creation
+    source: Windows Security Event Log
+    enable: 'Computer Configuration -> Windows Settings -> Security Settings -> Advanced Audit Policy Configuration -> System Audit Policies -> Detailed Tracking -> Audit Process 
+detection:
+    language: splunk
+    schema: default #ocsf, ecs # <-------------------- OPTIONAL?
+    body: index=* source="WinEventLog:*" AND (Image="*.exe" OR Image="*.com" OR Image="*.scr")
+response:
+    #actions:
+    #    Preparation:
+    #        - Make personnel report suspicious activity.
+    #    Identification:
+    #        - List of hosts communicated with internal domain.
+```
 
 ## Fields
 [This specification](local url) includes the list of all fields that can be used to write a RootA rule.
@@ -52,7 +115,7 @@ Thank you for your interest in the RootA open-source project! Your contribution 
 To submit your pull request with your ideas or suggestions for changes, take the following steps:
 
 1. Fork the [RootA repository](local url) and clone your fork to your local environment.
-2. Create a new feature branch, in which you’re going to make your changes.
+2. Create a new feature branch in which you’re going to make your changes.
 3. Then commit your changes to your newly created feature branch.
 4. Push the changes to your fork.
 5. Create a new Pull Request  
@@ -68,7 +131,6 @@ Please submit your technical feedback and suggestions to support@socprime.com or
 
 ## Maintainers
 Driving the idea of one common language for threat detection & response since 2016, SOC Prime team has developed RootA from the ground up, with major contributions to the project made by:
-
 - Roman Ranskyi
 - Alex Bredikhin
 - Ruslan Mikhalov
