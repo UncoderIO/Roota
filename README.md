@@ -156,7 +156,7 @@ The contents of this repo, along with RootA specifications, are in the public do
 
 ## Resources & Useful Links
 [RootA.IO](https://roota.io/) - the main website page of the single language for threat detection & response  
-[RootA Discord Channel](https://tdm.socprime.com/zeptolink/5IAokHui2iWUHaB8/) - join Discord channel to network with RootA enthusiasts
+[RootA Discord Channel](https://tdm.socprime.com/zeptolink/5IAokHui2iWUHaB8/) - join Discord channel to network with RootA enthusiasts  
 [Uncoder.IO](https://uncoder.io/) - free online translation engine for RootA, Sigma, and IOC-based queries  
 [Uncoder AI](https://tdm.socprime.com/uncoder-ai) - SaaS version of Uncoder acting as advanced IDE for detection engineering  
 [SOC Prime Platform](https://tdm.socprime.com/login) - the industry-first platform for collective cyber defense  
