@@ -56,48 +56,54 @@ You can get started by using one of the available rule templates, including full
 
 #### Minimal RootA rule example:
 ```
-name: Possible Credential Dumping using comsvcs.dll
+name: Possible Credential Dumping Using Comsvcs.dll (via cmdline)
 detection:
     language: splunk 
-    body: index=* source="WinEventLog:*" AND (Image="*.exe" OR Image="*.com" OR Image="*.scr")
+    body: index=* ((((process="*comsvcs*") AND (process="*MiniDump*")) OR ((process="*comsvcs*") AND (process="*#24*"))) OR ((process="*comsvcs*") AND (process="*full*")))
 ```
 #### Short RootA rule example:
 ```
-name: Possible Credential Dumping using comsvcs.dll
-details: Adversaries can use the built-in library comsvcs.dll to dump credentials on a compromised host.
+name: Possible Credential Dumping Using Comsvcs.dll (via cmdline)
+details: Adversaries can use built-in library comsvcs.dll to dump credentials on a compromised host.
 author: SOC Prime Team
-severity: medium
+severity: high
 references:
-    - https://blog.talosintelligence.com/2022/08/recent-cyber-attack.html
-    - https://lolbas-project.github.io/lolbas/Binaries/msedgewebview2/
+    - https://badoption.eu/blog/2023/06/21/dumpit.html
+    - https://thedfirreport.com/2022/08/08/bumblebee-roasts-its-way-to-domain-admin/
+    - https://www.microsoft.com/security/blog/2022/07/27/untangling-knotweed-european-private-sector-offensive-actor-using-0-day-exploits/
+    - https://cert.gov.ua/article/39518
 logsource:
     vendor: microsoft
     product: windows
     category: process_creation
 detection:
     language: splunk
-    body: index=* source="WinEventLog:*" AND (Image="*.exe" OR Image="*.com" OR Image="*.scr")
+    schema: cim
+    body: index=* ((((process="*comsvcs*") AND (process="*MiniDump*")) OR ((process="*comsvcs*") AND (process="*#24*"))) OR ((process="*comsvcs*") AND (process="*full*")))
 ```
 #### Full RootA rule example:
 ```
-name: Possible Credential Dumping using comsvcs.dll
-uuid: 009a001b-1623-4320-8369-95bf0d651e8e
-details: Adversaries can use the built-in library comsvcs.dll to dump credentials on a compromised host.
+name: Possible Credential Dumping Using Comsvcs.dll (via cmdline)
+uuid: 151fbb45-0048-497a-95ec-2fa733bb15dc
+details: Adversaries can use built-in library comsvcs.dll to dump credentials on a compromised host.
 author: SOC Prime Team
-version: 0.1
+version: 1
 license: DRL 1.1
 type: query
-class: campaign 
-severity: medium
-date: 01-01-2023
+class: behaviour
+severity: high
+date: 2020-05-24
 timeline:
-    2023-01-01 - 2023-03-06: Ducktail, MerlinAgent
-    2023-02-04: Lazarus
-mitre-attack: t1136.003, t1087.004, t1069
-tags: MerlinAgent, UAC-0173, UAC-0006, Ducktail, CERT-UA#4753, CERT-UA#5909, CERT-UA#7183
+    2022-04-01 - 2022-08-08: Bumblebee
+    2022-07-27: KNOTWEED
+    2022-12-04: UAC-0082, CERT-UA#4435
+mitre-attack: t1003.001
+tags: Bumblebee, UAC-0082, CERT-UA#4435, KNOTWEED, Comsvcs, cir_ttps, ContentlistEndpoint
 references:
-    - https://blog.talosintelligence.com/2022/08/recent-cyber-attack.html
-    - https://lolbas-project.github.io/lolbas/Binaries/msedgewebview2/
+    - https://badoption.eu/blog/2023/06/21/dumpit.html
+    - https://thedfirreport.com/2022/08/08/bumblebee-roasts-its-way-to-domain-admin/
+    - https://www.microsoft.com/security/blog/2022/07/27/untangling-knotweed-european-private-sector-offensive-actor-using-0-day-exploits/
+    - https://cert.gov.ua/article/39518
 logsource:
     layer: host
     vendor: microsoft
@@ -108,13 +114,8 @@ logsource:
 detection:
     language: splunk
     schema: cim
-    body: index=* source="WinEventLog:*" AND (Image="*.exe" OR Image="*.com" OR Image="*.scr")
-response:
-    #actions:
-    #    Preparation:
-    #        - Make personnel report suspicious activity.
-    #    Identification:
-    #        - List of hosts communicated with internal domain.
+    body: index=* ((((process="*comsvcs*") AND (process="*MiniDump*")) OR ((process="*comsvcs*") AND (process="*#24*"))) OR ((process="*comsvcs*") AND (process="*full*")))
+response: []
 ```
 
 ### Fields
