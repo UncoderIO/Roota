@@ -52,7 +52,7 @@ RootA is designed with broad customization opportunities. Use the RootA minimal 
 RootA is meant to be a highly flexible format with only two required fields: `name` and `detection`. All other fields are optional. 
 
 ### RootA Rule Templates
-You can get started by using one of the available rule templates, including full, short, or minimum based on your current needs. 
+You can get started by using one of the available rule templates, including full, short, or minimum, based on your current needs. 
 
 #### Minimal RootA rule example:
 ```
@@ -64,7 +64,7 @@ detection:
 #### Short RootA rule example:
 ```
 name: Possible Credential Dumping using comsvcs.dll
-details: Adversaries can use built-in library comsvcs.dll to dump credentials on a compromised host.
+details: Adversaries can use the built-in library comsvcs.dll to dump credentials on a compromised host.
 author: SOC Prime Team
 severity: medium
 references:
@@ -83,7 +83,7 @@ detection:
 name: Possible Credential Dumping using comsvcs.dll
 uuid: 009a001b-1623-4320-8369-95bf0d651e8e
 details: Adversaries can use the built-in library comsvcs.dll to dump credentials on a compromised host.
-author: SOC Prime Team, SOC Prime Team2
+author: SOC Prime Team
 version: 0.1
 license: DRL 1.1
 type: query
