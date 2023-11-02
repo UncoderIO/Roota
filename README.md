@@ -86,4 +86,3 @@ The contents of this repo, along with RootA specifications, are in the public do
 [Uncoder AI](https://tdm.socprime.com/uncoder-ai) - SaaS version of Uncoder acting as advanced IDE for detection engineering  
 [SOC Prime Platform](https://tdm.socprime.com/login) - the industry-first platform for collective cyber defense  
 [About SOC Prime](https://socprime.com/) 
-
