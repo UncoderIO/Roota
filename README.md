@@ -1,22 +1,27 @@
 ![Logo](images/roota_logo.png)
-# Welcome to RootA
+# RootA, the Open-Source Language for Collective Cyber Defence
+## Welcome to RootA
 Welcome to the RootA repository, a place that connects cybersecurity enthusiasts who are eager to collaborate on RootA rules and help evolve RootA as an open-source language for collective cyber defense. Despite all cyber defenders having a common goal, they tend to speak different languages. Driven by a common mission to bridge this gap and foster collective cyber defense, we’ve created this open-source RootA project.
 
 **Table Of Contents:**
 
-- [What Is RootA](#what_is_roota)
+- [What Is RootA](#what-is-roota)
 - [Why RootA](#why_roota)
-- [Writing RootA Rules](#writing_roota_rules)
-- [RootA Rule Templates](#rootA_rule_templates)
-- [How to Contribute](#how-do-i-contribute)
+- [Writing RootA Rules](#writing-roota-rules)
+- [How to Contribute](#how-to-contribute)
+- [Questions & Feedback](#questions--feedback)
+- [Maintainers](#maintainers)
+- [Credits](#credits)
+- [Licenses](#licenses)
+- [Resources & Useful Links](#resources--useful-links)
   
-# What Is RootA
+## What Is RootA
 RootA is a public-domain language for collective cyber defense, created to make threat detection, incident response, and actor attribution simple. It acts as an open-source wrapper on top of most of the existing SIEM, EDR, XDR, and Data Lake query languages. If you learn the basics of RootA, you will be able to contribute to collective defense. And if you have mastered a specific SIEM language, with RootA and Uncoder.IO you can speak them all.
 
-# Why RootA
+## Why RootA
 The objective of RootA is to accelerate the global cyber industry collaboration. You can easily start performing Detection Engineering tasks, having any background in writing SIEM or EDR detection rules. Alternatively, if you are good with generic languages like Sigma or Yara, then RootA will look like the next logical step forward.
 
-## Enabling Cross-Platform Query Translation
+### Enabling Cross-Platform Query Translation
 With RootA acting as a wrapper, cyber defenders can take a native rule or query and augment it with metadata to automatically translate the code into other SIEM, EDR, XDR, and Data Lake languages without the need to learn new technology:
 
 - **Simple universal format.** RootA is expressed using YAML, a wide-spread, easy-to-write and human-readable format.
@@ -24,7 +29,7 @@ With RootA acting as a wrapper, cyber defenders can take a native rule or query 
 - **Flexibility.** Depending on your SIEM, you can rely on log sources explicitly or implicitly defined in the native query itself or in the customizable `logsource` field.
 - **No need to learn a new technology.** To capture detection with RootA, you don't have to learn a new query language. The detection logic is specified in the native language of your SIEM, EDR, XDR, or Data Lake technology.
 
-## CTI and Metadata Enrichment
+### CTI and Metadata Enrichment
 RootA includes fields to define relevant cyber threat intelligence and metadata to create a self-sufficient document capturing the whole use case rather than mere detection logic:
 
 - **Mapping to TTPs.** Link detection logic to related tactics, techniques, and procedures in terms of MITRE ATT&CK®. Use custom tags to make the mapping even more tailored and detailed.
@@ -34,29 +39,29 @@ RootA includes fields to define relevant cyber threat intelligence and metadata 
 - **Details.** Well, that's where the devil is. Describe how the detection logic works and provide anything that may be useful to understand the code or use it properly.
 - **Response.** Define response recommendations for cases where the detection produces hits. Refer to best practices or provide specific instructions.
   
-## Community Collaboration
+### Community Collaboration
 - **Use Case Documentation.** Relying on the RootA language, cyber defenders can seamlessly document and share their threat research in a universal format describing the whole use case enriched with CTI, ATT&CK tagging, and other relevant fields.
 - **Knowledge Sharing.** RootA enables defenders to share vendor-agnostic use cases enriched with comprehensive metadata rather than mere detection logic to foster global information exchange among industry peers.
 - **Collective Cyber Defense.** Despite all cyber defenders having a common goal, they tend to speak different languages. To bridge this gap, we’ve created RootA, a single language for threat detection and response. 
 
-# Writing RootA Rules
+## Writing RootA Rules
 This guide helps you create a RootA rule. You can start writing RootA rules in any code editor that supports YAML. We recommend using Uncoder which aggregates built-in RootA templates to streamline your detection engineering process. 
 
 RootA is designed with broad customization opportunities. Use the RootA minimal template if you just need to capture seamless cross-platform query translation into any SIEM, EDR, or XDR native format. Alternatively, apply full or short RootA templates to document your security use case in detail and share the research with peers.
 
 RootA is meant to be a highly flexible format with only two required fields: `name` and `detection`. All other fields are optional. 
 
-## RootA Rule Templates
+### RootA Rule Templates
 You can get started by using one of the available rule templates, including full, short, or minimum based on your current needs. 
 
-### Minimal RootA rule example:
+#### Minimal RootA rule example:
 ```
 name: Possible Credential Dumping using comsvcs.dll
 detection:
     language: splunk 
     body: index=* source="WinEventLog:*" AND (Image="*.exe" OR Image="*.com" OR Image="*.scr")
 ```
-### Short RootA rule example:
+#### Short RootA rule example:
 ```
 name: Possible Credential Dumping using comsvcs.dll
 details: Adversaries can use built-in library comsvcs.dll to dump credentials on a compromised host.
@@ -73,7 +78,7 @@ detection:
     language: splunk
     body: index=* source="WinEventLog:*" AND (Image="*.exe" OR Image="*.com" OR Image="*.scr")
 ```
-### Full RootA rule example:
+#### Full RootA rule example:
 ```
 name: Possible Credential Dumping using comsvcs.dll
 uuid: 009a001b-1623-4320-8369-95bf0d651e8e
@@ -113,10 +118,10 @@ response:
     #        - List of hosts communicated with internal domain.
 ```
 
-## Fields
+### Fields
 [This specification](local url) includes the list of all fields that can be used to write a RootA rule.
 
-# How to Contribute
+## How to Contribute
 Thank you for your interest in the RootA open-source project! Your contribution really matters in evolving the project and helping us make the RootA language even more useful for the global cyber defender community.
 
 To submit your pull request with your ideas or suggestions for changes, take the following steps:
@@ -137,7 +142,7 @@ Thank you for your contribution to the RootA project!
 Please submit your technical feedback and suggestions to support@socprime.com or a RootA channel in [SOC Prime’s Discord](https://discord.gg/socprime). Also, refer to the guidance for contributors to support the RootA project or simply report issues.
 
 ## Maintainers
-Driving the idea of establishing a unified language and toolkit for threat detection and response since 2015, the SOC Prime team has developed RootA from the ground up, with major contributions to the project made by:
+Driving the idea of establishing a unified language and toolkit for threat detection and response since 2015, SOC Prime team has developed RootA from the ground up, with major contributions to the project made by:
 - Roman Ranskyi
 - Alex Bredikhin
 - Ruslan Mikhalov
