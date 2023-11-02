@@ -162,8 +162,8 @@ Possible Values:
 - `informational`
 - `cve`
 - `ioc`
-- 
-Example: `class: campaign #behavioral, tool, informational, cve, ioc`
+
+Example: `class: campaign`
 
 
 ## severity
@@ -179,6 +179,7 @@ Possible Values:
 - `high` - investigation with a high priority should be in place. Low probability of false positives.
 - `medium` - ?????
 - `low` - ?????
+
 Example: `severity: medium`
 
 
@@ -196,18 +197,21 @@ Example: date: `2022-10-31`
 ## timeline
 
 Format: 
+
 `YYYY-MM-DD - YYYY-MM-DD: Actor1, Actor2, TLP:CLEAR`
+
 `YYYY-MM-DD: Actor1, Actor3, TLP:GREEN`
 
 Required: *optional*
 
-Description: Has to include the name of the actor, TLP:key, and dates when behavior described in the RootA rule was used by the Actor. On the contrary to indicators of compromise, which are Actor specific, behaviors are constant while Actor is a variable. If the TLP:key is not defined, it is perceived as TLP:CLEAR. Period can be defined with two dates (first and last seen) or with one date.
+Description: Has to include the name of the actor, TLP:key, and dates when behavior described in the RootA rule was used by the Actor. On the contrary to indicators of compromise, which are Actor specific, behaviors are constant while Actor is a variable. If the TLP:key is not defined, it is perceived as TLP:CLEAR. The period can be defined with two dates (first and last seen) or with one date.
 
 Example: 
-`timeline:`
-`    2023-01-01 - 2023-03-06: Ducktail, MerlinAgent`
-`    2023-02-04: Lazarus`
-
+```
+timeline:
+    2023-01-01 - 2023-03-06: Ducktail, MerlinAgent`
+    2023-02-04: Lazarus
+```
 
 ## mitre-attack
 
