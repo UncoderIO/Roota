@@ -1,4 +1,4 @@
-![Logo](.images/roota_logo.png)
+![Logo](images/roota_logo.png)
 # Welcome to RootA
 Welcome to the RootA repository, a place that connects cybersecurity enthusiasts who are eager to collaborate on RootA rules and help evolve RootA as a single language for threat detection and response. Despite all cyber defenders having a common goal, they tend to speak different languages. Driven by a common mission to bridge this gap and foster collective cyber defense, we’ve created this open-source RootA project.
 
