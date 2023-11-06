@@ -21,19 +21,17 @@ RootA is a public-domain language for collective cyber defense, created to make 
 The objective of RootA is to accelerate the global cyber industry collaboration. With RootA acting as a wrapper, cyber defenders can take a native rule or query and augment it with metadata to automatically translate the code into other SIEM, EDR, XDR, and Data Lake languages without the need to learn new technology:
 
 - **Simple universal format.** RootA is expressed using YAML, a wide-spread, easy-to-write and human-readable format.
-- **Keeping the full power of your query.** RootA lets you capture all the native SIEM functions, including aggregations, correlations, and using multiple log sources. This way, your complex detection logic can later be rendered in other languages.
 - **Flexibility.** Depending on your SIEM, you can rely on log sources explicitly or implicitly defined in the native query itself or in the customizable `logsource` field.
-- **No need to learn a new technology.** To capture detection with RootA, you don't have to learn a new query language. The detection logic is specified in the native language of your SIEM, EDR, XDR, or Data Lake technology.
+- **Unlock the Full Power of Your SIEM and EDR.** Break through the limits of describing attack behavior by leveraging stateful logic of any sophistication, instead of a flat IOC-like string matching. This way you can assure that detection logic you build and share is harder to bypass by the attackers, is more compute efficient and can later be rendered in other languages.
+- **Empower Your Detection Engineering Skills.** To capture detection logic with RootA, you can use any query language that you already know. Initial rule is specified in the native language of your favorite SIEM, EDR or Data Lake technology.
 
-### CTI and Metadata Enrichment
-RootA includes fields to define relevant cyber threat intelligence and metadata to create a self-sufficient document capturing the whole use case rather than mere detection logic:
+### A Journey Beyond Detection
+RootA is designed to welcome all members of cyber defence industry, maximising the use of open standards such as MITRE ATT&CK, OCSF schema and Sigma rules.
 
+- **Advanced Compatibility.** RootA syntax fully accommodates OCSF and Sigma rules as taxonomy, making it fast to learn, easy to read and share, and providing maximum compatibility for Detection Engineers.
+- **Threat Actor Timeline.** While Actors change, behaviours stay the same. RootA supports an additional threat intelligence layer for CERTs, NCSCs, ISACs, MDRs, and Defence Agencies, to coordinate defence faster and with greater precision.
 - **Mapping to TTPs.** Link detection logic to related tactics, techniques, and procedures in terms of MITRE ATT&CK®. Use custom tags to make the mapping even more tailored and detailed.
-- **Timeline.** Ensure a clear understanding of the adversary's behavior over the course of an attack. Specify when a particular actor, tool, or threat was detected.
-- **Triage facilitation.** Define the severity of a potential hit to help in its prioritization. Be mindful of SOC operators who are sometimes overwhelmed with alerts.
-- **Author and license.** Writing a rule requires a great deal of effort and expertise. Ensure the credit is on the right person and define the license for use.
-- **Details.** Well, that's where the devil is. Describe how the detection logic works and provide anything that may be useful to understand the code or use it properly.
-- **Response.** Define response recommendations for cases where the detection produces hits. Refer to best practices or provide specific instructions.
+- **Response as Code.** With enough community members and industry adoption, the next step after detection is sharing the code to automate response.
   
 ### Community Collaboration
 - **Use Case Documentation.** Relying on the RootA language, cyber defenders can seamlessly document and share their threat research in a universal format describing the whole use case enriched with CTI, ATT&CK tagging, and other relevant fields.
