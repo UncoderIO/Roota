@@ -324,22 +324,22 @@ Description: The field should specify the name of the SIEM/EDR/XDR in the approp
 
 Possible Values: 
 
-- `sentinel-kql-query`
-- `sentinel-kql-rule`
-- `splunk-spl-query`
-- `splunk-spl-rule`
-- `crowdstrike-spl-query`
-- `elastic-lucene-query`
-- `elastic-lucene-rule`
-- `opensearch-lucene-query`
-- `logscale-lql-query`
-- `logscale-lql-rule`
-- `mde-kql-query`
-- `qradar-aql-query`
-- `sigma-yml-rule`
-- `athena-sql-query`
-- `chronicle-yaral-query`
-- `chronicle-yaral-rule`
+- `sentinel-kql-query` for Microsoft Sentinel Query
+- `sentinel-kql-rule` for Microsoft Sentinel Rule
+- `splunk-spl-query` for Splunk Query
+- `splunk-spl-rule` for Splunk Alert
+- `crowdstrike-spl-query` for CrowdStrike Query
+- `elastic-lucene-query` for Elasticsearch Query
+- `elastic-lucene-rule` for Elasticsearch Rule
+- `opensearch-lucene-query` for AWS OpenSearch Query
+- `logscale-lql-query` for Falcon LogScale Query
+- `logscale-lql-rule` for Falcon LogScale Rule
+- `mde-kql-query` for Microsoft Defender for Endpoint Query
+- `qradar-aql-query` for IBM QRadar Query
+- `sigma-yml-rule` for Sigma Rule
+- `athena-sql-query` for WS Athena Query (Security Lake)
+- `chronicle-yaral-query` for Chronicle Security Query
+- `chronicle-yaral-rule` for Chronicle Security Rule
   
 Example: `language: splunk-spl-query`
 
