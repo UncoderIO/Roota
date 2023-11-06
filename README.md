@@ -52,65 +52,53 @@ You can get started by using one of the available rule templates, including full
 #### Minimal RootA rule example:
 ```
 name: Possible Credential Dumping Using Comsvcs.dll (via cmdline)
-detection:
-    language: splunk 
-    body: index=* ((((process="*comsvcs*") AND (process="*MiniDump*")) OR ((process="*comsvcs*") AND (process="*#24*"))) OR ((process="*comsvcs*") AND (process="*full*")))
-```
-#### Short RootA rule example:
-```
-name: Possible Credential Dumping Using Comsvcs.dll (via cmdline)
 details: Adversaries can use built-in library comsvcs.dll to dump credentials on a compromised host.
 author: SOC Prime Team
 severity: high
-references:
-    - https://badoption.eu/blog/2023/06/21/dumpit.html
-    - https://thedfirreport.com/2022/08/08/bumblebee-roasts-its-way-to-domain-admin/
-    - https://www.microsoft.com/security/blog/2022/07/27/untangling-knotweed-european-private-sector-offensive-actor-using-0-day-exploits/
-    - https://cert.gov.ua/article/39518
-logsource:
-    vendor: microsoft
-    product: windows
-    category: process_creation
+date: 2020-05-24
+mitre-attack: t1003.001
 detection:
-    language: splunk
-    schema: cim
+    language: splunk-spl-query # elastic-lucene-query, logscale-lql-query, mde-kql-query
     body: index=* ((((process="*comsvcs*") AND (process="*MiniDump*")) OR ((process="*comsvcs*") AND (process="*#24*"))) OR ((process="*comsvcs*") AND (process="*full*")))
+references: 
+    - https://badoption.eu/blog/2023/06/21/dumpit.html
+license: DRL 1.1
 ```
+
 #### Full RootA rule example:
 ```
 name: Possible Credential Dumping Using Comsvcs.dll (via cmdline)
-uuid: 151fbb45-0048-497a-95ec-2fa733bb15dc
 details: Adversaries can use built-in library comsvcs.dll to dump credentials on a compromised host.
 author: SOC Prime Team
-version: 1
-license: DRL 1.1
-type: query
-class: behaviour
 severity: high
+type: query 
+class: behaviour
 date: 2020-05-24
+mitre-attack: t1003.001
 timeline:
     2022-04-01 - 2022-08-08: Bumblebee
     2022-07-27: KNOTWEED
     2022-12-04: UAC-0082, CERT-UA#4435
-mitre-attack: t1003.001
-tags: Bumblebee, UAC-0082, CERT-UA#4435, KNOTWEED, Comsvcs, cir_ttps, ContentlistEndpoint
-references:
-    - https://badoption.eu/blog/2023/06/21/dumpit.html
-    - https://thedfirreport.com/2022/08/08/bumblebee-roasts-its-way-to-domain-admin/
-    - https://www.microsoft.com/security/blog/2022/07/27/untangling-knotweed-european-private-sector-offensive-actor-using-0-day-exploits/
-    - https://cert.gov.ua/article/39518
 logsource:
-    layer: host
-    vendor: microsoft
-    product: windows
-    category: process_creation
-    source: Windows Security Event Log
-    enable: Computer Configuration -> Windows Settings -> Security Settings -> Advanced Audit Policy Configuration -> System Audit Policies -> Detailed Tracking -> Audit Process
+    product: Windows                # Sigma or OCSF products
+    log_name: Security              # OCSF log names
+    class_name: Process Activity    # OCSF classes
+    #category:                      # Sigma categories
+    #service:                       # Sigma services
+    audit:
+        source: Windows Security Event Log 
+        enable: Computer Configuration -> Windows Settings -> Security Settings -> Advanced Audit Policy Configuration -> System Audit Policies -> Detailed Tracking -> Audit Process
 detection:
-    language: splunk
-    schema: cim
+    language: splunk-spl-query # elastic-lucene-query, logscale-lql-query, mde-kql-query
     body: index=* ((((process="*comsvcs*") AND (process="*MiniDump*")) OR ((process="*comsvcs*") AND (process="*#24*"))) OR ((process="*comsvcs*") AND (process="*full*")))
-response: []
+references: 
+    - https://badoption.eu/blog/2023/06/21/dumpit.html
+tags: Bumblebee, UAC-0082, CERT-UA#4435, KNOTWEED, Comsvcs, cir_ttps, ContentlistEndpoint
+license: DRL 1.1
+version: 1
+uuid: 151fbb45-0048-497a-95ec-2fa733bb15dc
+#correlation: [] # extended format
+#response: []    # extended format
 ```
 
 ### Fields
