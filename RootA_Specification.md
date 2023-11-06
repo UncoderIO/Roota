@@ -81,7 +81,7 @@ Format: `text (max 1024 characters)`
 
 Required: *mandatory*
 
-Description: Name of the rule which reflects the goal and the method used in the rule
+Description: The name of the rule which reflects the goal and the method used in the rule
 
 Example: name: `Possible Credential Dumping using comsvcs.dll`
 
@@ -101,7 +101,7 @@ Format: `text (max 256 characters)`
 
 Required: *optional*
 
-Description: Name of the creator. It is recommended to use the same name for all your rules. Coma-separated value. 
+Description: The name of the creator. It is recommended to use the same name for all your rules. Comma-separated value. 
 
 Example: `author: SOC Prime Team`
 
@@ -112,12 +112,12 @@ Format: `text (max 16 characters)`
 
 Required: *optional*
 
-Description: Severity of the rule which indicates the level of rule importance and investigation priority.
+Description: The severity of the rule which indicates the level of the rule's importance and investigation priority.
 
 Possible Values: 
 - `critical` - When critical severity rules are triggered, immediate action is required. Critical rules have a very low probability of false positives, or are highly sensitive actions that must always be deconflicted.
-- `high` - When high severity rules are triggered an investigation/case should be created and completed with a high priority. Low probability of false positives after minimal tuning. 
-- `medium` -  Medium severity rules will likely require tuning in the average environment. After tuning, when medium security rules are triggered a case should  be generated with medium priority. 
+- `high` - When high severity rules are triggered, an investigation/case should be created and completed with a high priority. Low probability of false positives after minimal tuning. 
+- `medium` - Medium severity rules will likely require tuning in an average environment. After tuning, when medium security rules are triggered, a case should be generated with medium priority. 
 - `low` - Low severity rules should be used as part of correlations, or to support triage and enrich the analysis environment. Some of these rules may be used as case generators after a significant amount of tuning.
 
 Example: `severity: medium`
@@ -128,9 +128,9 @@ Format: `text (max 16 characters)`
 
 Required: *optional*
 
-Description: The type of the rule that indicates whether the rule is intended for threat hunting 'query' (may generate false positives) or for real-time detection 'alert' (rarely generate false positives).
-Alerts will be defined as a rule that in the majority of environments will cause a low false positive or true positive - benign rate. For instance, if a rule requires for someone to add domain controllers to filter out benign events, this would NOT be considered an alert.
-Queries will be defined as any rule that we anticipate will require tuning in most environments.
+Description: The type of the rule that indicates whether the rule is intended as a threat hunting 'query' (may generate false positives) or a real-time detection 'alert' (rarely generates false positives).
+An alert can be defined as a rule that in the majority of environments will cause a low false positive or true positive - benign rate. For instance, if a rule requires for someone to add domain controllers to filter out benign events, it would NOT be considered an alert.
+A query can be defined as any rule that can be expected to require tuning in most environments.
 
 Possible Values: 
 - `query`
@@ -154,7 +154,7 @@ Possible Values:
 
 Description:
 - `Exploit Rules`
-  These are rules meant to identify the exploitation or probing of a vulnerability (e.g. CVE, General SQL-I / XSS Rules). Many of these rules would qualify as "alerts". Example a rule built for Log4J detection. These rules are useful indefinitely.
+  These are rules meant to identify the exploitation or probing of a vulnerability (e.g. CVE, General SQL-I / XSS Rules). Many of these rules would qualify as "alerts". An example would be a rule built for Log4J detection. These rules are useful indefinitely.
 
 - `Behavioral Rules`
   These rules are meant to identify behaviors that may match an adversary's behavior based on known reporting. Many of these rules would qualify as "queries". An example of a behavioral rule would be a rule that identifies a remote login of a local administrator account. These rules will NOT include information specific to a campaign. These rules are useful retroactively, and on average have a 12+ month expectancy of usefulness.
@@ -166,7 +166,7 @@ Description:
   These rules identify the usage of a specific tool (offensive, or living off the land). For instance, a rule meant to identify psexec specifically would be a "tool" rule. A rule meant to identify psexec and any similar tool, without explicitly identifying attributes that are unique to those tools would be considered a behavioral rule.
 
  - `IOC Rule`
-  Rules that are created for urgent adversary activity that has little-to-know other detection measures (e.g. wannacry, notpetya, mass & urgent exploitation).  Mostly for IOCs like domains, IPs, hashes, url.
+  Rules that are created for urgent adversary activity that has little to no other detection measures (e.g. wannacry, notpetya, mass & urgent exploitation). Mostly for IOCs like domains, IPs, hashes, URLs.
 
 - `Generic Rules`
   These rules are meant to identify potential weaknesses in an environment. For instance, a rule that identifies weak encryption in Kerberos (RC4_HMAC_MD5). Rules that provide only information that has a very small chance of being a true-positive but is good for customers to keep an eye on. For instance, the root user account of AWS being utilized.
@@ -191,7 +191,7 @@ Format: `text (max 1024 characters)`
 
 Required: *optional*
 
-Description: Coma-separated MITRE ATT&CK Techniques, Subtechnique, Groups, Software IDs. All IDs should be in lowercase.
+Description: Comma-separated MITRE ATT&CK (r) Techniques, Subtechniques, Groups, Software IDs. All IDs should be in lowercase.
 
 Example: `mitre-attack: t1136.003, t1087.004, t1069`
 
@@ -207,7 +207,7 @@ YYYY-MM-DD: Actor1, Actor3, TLP:GREEN
 
 Required: *optional*
 
-Description: Has to include the name of the actor, TLP:key, and dates when behavior described in the RootA rule was used by the Actor. On the contrary to indicators of compromise, which are Actor specific, behaviors are constant while Actor is a variable. If the TLP:key is not defined, it is perceived as TLP:CLEAR. The period can be defined with two dates (first and last seen) or with one date.
+Description: Has to include the name of the actor, TLP:key, and dates when the behavior described in the RootA rule was used by the Actor. On the contrary to indicators of compromise, which are Actor specific, behaviors are constant while Actor is a variable. If the TLP:key is not defined, it is perceived as TLP:CLEAR. The period can be defined with two dates (first and last seen) or with one date.
 
 Example: 
 ```
@@ -221,7 +221,7 @@ timeline:
 
 Required: *optional*
 
-Description: Section that describes needed log sources for the rule. It is optional but could be necessary in some cases when the detection logic doesn’t describe which log sources are required. 
+Description: This section describes log sources required for the rule. It is optional but could be necessary in some cases when the detection logic doesn’t describe which log sources are required. 
 
 
 ### product
@@ -230,7 +230,7 @@ Format: `text (max 128 characters)`
 
 Required: *optional*
 
-Description: ?????
+Description: The product that reported the event.
 
 Example: `product: windows`
 
@@ -241,7 +241,7 @@ Format: `text (max 128 characters)`
 
 Required: *optional*
 
-Description: ?????
+Description: The event log name. For example, syslog file name or Windows logging subsystem: Security.
 
 Example: `log_name: Security`
 
@@ -252,7 +252,7 @@ Format: `text (max 128 characters)`
 
 Required: *optional*
 
-Description: ?????
+Description: The OCSF event classes. Details: [https://schema.ocsf.io/1.0.0/classes](https://schema.ocsf.io/1.0.0/classes)
 
 Example: `class_name: Process Activity`
 
@@ -350,7 +350,7 @@ Format: `text (max 8192 characters)`
 
 Required: *mandatory*
 
-Description: The section should contain a rule logic. It should be a SIEM/EDR/XDR query in the native format. The query should be in one line. In case you have a multiline query, you should join lines before adding it to the RootA rule. 
+Description: This section should contain the rule's logic. It should be a SIEM/EDR/XDR query in the native format. The query should be in one line. In case you have a multiline query, you should join lines before adding it to the RootA rule. 
 
 Example: `index=* source="WinEventLog:*" AND (Image="*.exe" OR Image="*.com")`
 
@@ -361,7 +361,7 @@ Format: `text (max 2048 characters)`
 
 Required: *optional*
 
-Description: ?????
+Description: Links to articles in the media, posts, or other sources that describe the threat, exploit, behavior, etc. that the rule detects.
 
 Example: 
 ```
@@ -377,7 +377,7 @@ Format: `text (max 1024 characters)`
 
 Required: *optional*
 
-Description: Coma-separated short words that can label RootA rule for keyword search. Tags should be in lowercase, with no spaces. 
+Description: Comma-separated short words that can label RootA rule for keyword search.   
 
 Example: `tags: MerlinAgent, UAC-0173, UAC-0006, Ducktail, CERT-UA#4753`
 
@@ -407,7 +407,7 @@ Format: `text (32 characters)`
 
 Required: *optional*
 
-Description: Unique ID of the rule. UUID version 4 is recommended to use. 
+Description: Unique ID of the rule. UUID version 4 is recommended for use. 
 
 Example: 009a001b-1623-4320-8369-95bf0d651e8e
 
