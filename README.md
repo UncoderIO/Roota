@@ -56,7 +56,9 @@ details: Adversaries can use built-in library comsvcs.dll to dump credentials on
 author: SOC Prime Team
 severity: high
 date: 2020-05-24
-mitre-attack: t1003.001
+mitre-attack:
+    - t1003.001
+    - t1136.003
 detection:
     language: splunk-spl-query # elastic-lucene-query, logscale-lql-query, mde-kql-query
     body: index=* ((((process="*comsvcs*") AND (process="*MiniDump*")) OR ((process="*comsvcs*") AND (process="*#24*"))) OR ((process="*comsvcs*") AND (process="*full*")))
