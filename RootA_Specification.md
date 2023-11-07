@@ -282,7 +282,7 @@ Example: `service: apache`
 
 Required: *optional*
 
-Description: ?????
+Description: This section describes in detail what logging service should be enabled to have the logs required for the rule.
 
 
 ### source
@@ -291,7 +291,7 @@ Format: `text (max 128 characters)`
 
 Required: *optional*
 
-Description: ?????
+Description: The full name of the logging provider or logging service that logged the event. For example, Microsoft-Windows-Security-Auditing.
 
 Example: `source: Microsoft-Windows-PowerShell/Operational`
 
@@ -302,7 +302,7 @@ Format: `text (max 2048 characters)`
 
 Required: *optional*
 
-Description: ?????
+Description: This section provides detailed instructions on how to enable the required log audit in the source system.
 
 Example: `enable: 'Computer Configuration -> Windows Settings -> Security Settings -> Advanced Audit Policy Configuration -> System Audit Policies -> Detailed Tracking -> Audit Process Creation'`
 
@@ -311,7 +311,7 @@ Example: `enable: 'Computer Configuration -> Windows Settings -> Security Settin
 
 Required: *mandatory*
 
-Description: 
+Description:
 
 
 ### language
