@@ -47,7 +47,9 @@ severity: high
 type: query 
 class: behaviour
 date: 2020-05-24
-mitre-attack: t1003.001
+mitre-attack:
+    - t1003.001
+    - t1136.003
 timeline:     # for Actors and campaigns only
     2022-04-01 - 2022-08-08: Bumblebee
     2022-07-27: KNOTWEED
@@ -191,9 +193,15 @@ Format: `text (max 1024 characters)`
 
 Required: *optional*
 
-Description: Comma-separated MITRE ATT&CK (r) Techniques, Subtechniques, Groups, Software IDs. All IDs should be in lowercase.
+Description: List of MITRE ATT&CK (r) Techniques, Subtechniques, Groups, Software IDs. All IDs should be in lowercase.
 
-Example: `mitre-attack: t1136.003, t1087.004, t1069`
+Example: 
+```
+mitre-attack:
+    - t1136.003
+    - t1087.004
+    - t1069
+```
 
 
 ## timeline
@@ -362,7 +370,6 @@ Example:
 ```
 references: 
     - https://badoption.eu/blog/2023/06/21/dumpit.html
-    - 
 ```
 
 
