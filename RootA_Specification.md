@@ -262,7 +262,7 @@ Format: `text (max 128 characters)`
 
 Required: *optional*
 
-Description: ?????
+Description: A category is used when disparate data sources provide the same type of event logging. For instance, Microsoft Windows 4688 & Sysmon Event ID 1 both provide process creation logs and share many of the same fields. Therefore, we can write and consume rules written generally for "process_creation" instead of rules written specifically for exact data sources. The same goes for most firewalls, proxies, etc.
 
 Example: `category: process_creation`
 
@@ -273,7 +273,7 @@ Format: `text (max 128 characters)`
 
 Required: *optional*
 
-Description: ?????
+Description: A service is used when a distinct data source exists for the relevant event logs. As an example, Amazon Cloudtrail eventing is specific to AWS. You generally cannot use a rule made for one service against another data source.
 
 Example: `service: apache`
 
