@@ -74,7 +74,9 @@ severity: high
 type: query 
 class: behaviour
 date: 2020-05-24
-mitre-attack: t1003.001
+mitre-attack:
+    - t1003.001
+    - t1136.003
 timeline:
     2022-04-01 - 2022-08-08: Bumblebee
     2022-07-27: KNOTWEED
