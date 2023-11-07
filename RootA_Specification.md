@@ -333,7 +333,7 @@ Possible Values:
 - `mde-kql-query` for Microsoft Defender for Endpoint Query
 - `qradar-aql-query` for IBM QRadar Query
 - `sigma-yml-rule` for Sigma Rule
-- `athena-sql-query` for WS Athena Query (Security Lake)
+- `athena-sql-query` for AWS Athena Query (Security Lake)
 - `chronicle-yaral-query` for Chronicle Security Query
   
 Example: `language: splunk-spl-query`
