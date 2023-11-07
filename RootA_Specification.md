@@ -311,7 +311,7 @@ Example: `enable: 'Computer Configuration -> Windows Settings -> Security Settin
 
 Required: *mandatory*
 
-Description:
+Description: This section contains the fields that specify the detection logic and the language used to express it. See the specifications of the fields below.
 
 
 ### language
