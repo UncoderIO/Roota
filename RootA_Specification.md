@@ -81,7 +81,7 @@ Format: `text (max 1024 characters)`
 
 Required: *mandatory*
 
-Description: The name of the rule which reflects the goal and the method used in the rule
+Description: The name of the rule which reflects the goal and the method used in the rule.
 
 Example: name: `Possible Credential Dumping using comsvcs.dll`
 
@@ -91,7 +91,7 @@ Format: `text (max 8192 characters)`
 
 Required: *optional*
 
-Description: A short description of the rule that should give more context to the detection and threats that can be detected with this rule
+Description: A short description of the rule that should give more context to the detection and threats that can be detected with this rule.
 
 Example: `details: Adversaries can use the built-in library comsvcs.dll to dump credentials on a compromised host.`
 
@@ -207,7 +207,7 @@ YYYY-MM-DD: Actor1, Actor3, TLP:GREEN
 
 Required: *optional*
 
-Description: Has to include the name of the actor, TLP:key, and dates when the behavior described in the RootA rule was used by the Actor. On the contrary to indicators of compromise, which are Actor specific, behaviors are constant while Actor is a variable. If the TLP:key is not defined, it is perceived as TLP:CLEAR. The period can be defined with two dates (first and last seen) or with one date.
+Description: It has to include the name of the actor, TLP:key, and dates when the behavior described in the RootA rule was used by the Actor. On the contrary to indicators of compromise, which are Actor specific, behaviors are constant while Actor is a variable. If the TLP:key is not defined, it is perceived as TLP:CLEAR. The period can be defined with two dates (first and last seen) or with one date.
 
 Example: 
 ```
