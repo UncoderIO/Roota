@@ -91,7 +91,9 @@ tags: Bumblebee, UAC-0082, CERT-UA#4435, KNOTWEED, Comsvcs, cir_ttps, Contentlis
 license: DRL 1.1
 version: 1
 uuid: 151fbb45-0048-497a-95ec-2fa733bb15dc
-#correlation: [] # extended format
+correlation: 
+    timeframe: 1m
+    functions: count() > 3
 #response: []    # extended format
 ```
 
