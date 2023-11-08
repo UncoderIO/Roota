@@ -39,10 +39,14 @@ RootA is designed to welcome all members of cyber defence industry, maximising t
 You can start writing RootA rules in any code editor that supports YAML. 
 To translate RootA rules to other languages use Uncoder.IO by building it from source https://github.com/UncoderIO/UncoderIO or hosted online privately by SOC Prime since 2018 at https://uncoder.io
 
-RootA is designed with broad customization opportunities. Use the RootA minimal template if you just need to capture seamless cross-platform query translation into any SIEM, EDR, or XDR native format. Alternatively, apply full or short RootA templates to document your security use case in detail and share the research with peers. 
-
 ### RootA Rule Templates
-You can get started by using one of the available rule templates, including full, short, or minimum, based on your current needs. 
+RootA Rule format has minimal, full and extended templates.
+
+**Minimal** template is for keeping rules simple, requiring only a name, description, author, severity, date, MITRE ATT&CK tags, detection query in any specific language, reference and license.
+
+**Full** template is for adding alerting context, threat actor campaign timeline, specific log source attributes defined based on Sigma Rules or AWS OCSF taxonomy, and cross-platform correlation section.
+
+**Extended** template is currently reserved for adding response as code and experimental features.
 
 #### Minimal RootA rule example:
 ```
