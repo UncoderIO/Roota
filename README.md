@@ -4,7 +4,6 @@
 
 # An Open-Source Language for Collective Cyber Defence
 
-## What Is RootA
 RootA is a public-domain language for collective cyber defense, created to make threat detection, incident response, and actor attribution simple. It acts as an open-source wrapper on top of most of the existing SIEM, EDR, XDR, and Data Lake query languages. If you learn the basics of RootA, you will be able to contribute to collective defense. And if you have mastered a specific SIEM language, with RootA and Uncoder IO you can speak them all.
 
 **Table Of Contents:**
@@ -126,12 +125,12 @@ To submit your pull request with your ideas or suggestions for changes, take the
 Thank you for your contribution to the RootA project!
 
 ## Maintainers
-Driving the idea of establishing a unified language and toolkit for threat detection and response since 2015, SOC Prime team has developed RootA from the ground up, with major contributions to the project made by:
 - Roman Ranskyi
 - Alex Bredikhin
+- [Adam Swan](https://github.com/acalarch/)
 - Ruslan Mikhalov
-- Andrii Bezverkhyi
-- Adam Swan
+- [Andrii Bezverkhyi](https://www.linkedin.com/in/andriimb/)
+
 
 ## Credits
 We are genuinely grateful to security professionals who contribute their time, expertise, and creativity to evolve the RootA open-source project.
