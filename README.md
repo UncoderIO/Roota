@@ -79,10 +79,9 @@ date: 2020-05-24
 mitre-attack:
     - t1003.001
     - t1136.003
-timeline:
-    2022-04-01 - 2022-08-08: Bumblebee
-    2022-07-27: KNOTWEED
-    2022-12-04: UAC-0082, CERT-UA#4435
+detection:
+    language: splunk-spl-query # elastic-lucene-query, logscale-lql-query, mde-kql-query
+    body: index=* ((((process="*comsvcs*") AND (process="*MiniDump*")) OR ((process="*comsvcs*") AND (process="*#24*"))) OR ((process="*comsvcs*") AND (process="*full*")))
 logsource:
     product: Windows                # Sigma or OCSF products
     log_name: Security              # OCSF log names
@@ -92,9 +91,10 @@ logsource:
     audit:
         source: Windows Security Event Log 
         enable: Computer Configuration -> Windows Settings -> Security Settings -> Advanced Audit Policy Configuration -> System Audit Policies -> Detailed Tracking -> Audit Process
-detection:
-    language: splunk-spl-query # elastic-lucene-query, logscale-lql-query, mde-kql-query
-    body: index=* ((((process="*comsvcs*") AND (process="*MiniDump*")) OR ((process="*comsvcs*") AND (process="*#24*"))) OR ((process="*comsvcs*") AND (process="*full*")))
+timeline:
+    2022-04-01 - 2022-08-08: Bumblebee
+    2022-07-27: KNOTWEED
+    2022-12-04: UAC-0082, CERT-UA#4435
 references: 
     - https://badoption.eu/blog/2023/06/21/dumpit.html
 tags: Bumblebee, UAC-0082, CERT-UA#4435, KNOTWEED, Comsvcs, cir_ttps, ContentlistEndpoint
@@ -124,9 +124,6 @@ To submit your pull request with your ideas or suggestions for changes, take the
     d. Finally, submit your Pull Request and wait for its approval.  
 
 Thank you for your contribution to the RootA project!
-
-## Questions & Feedback
-Please submit your technical feedback and suggestions to support@socprime.com or a **RootA** channel in [SOC Prime’s Discord](https://discord.gg/socprime). Also, refer to the [guidance for contributors](#how-to-contribute) to support the RootA project or simply [report issues](https://github.com/UncoderIO/RootA/issues).
 
 ## Maintainers
 Driving the idea of establishing a unified language and toolkit for threat detection and response since 2015, SOC Prime team has developed RootA from the ground up, with major contributions to the project made by:
