@@ -18,19 +18,13 @@ RootA is a public-domain language for collective cyber defense, created to make 
 - [Resources & Useful Links](#resources--useful-links)
   
 ## Why RootA
+The objective of RootA is to accelerate the global cyber industry collaboration. With RootA acting as a wrapper, cyber defenders can take a native rule or query and augment it with metadata to automatically translate the code into other SIEM, EDR, XDR, and Data Lake languages. Inspired by success of Yara and Sigma rules, RootA is focused on a broader applicability by a larger community of defenders.
 
-### Enabling Cross-Platform Query Translation
-The objective of RootA is to accelerate the global cyber industry collaboration. With RootA acting as a wrapper, cyber defenders can take a native rule or query and augment it with metadata to automatically translate the code into other SIEM, EDR, XDR, and Data Lake languages without the need to learn new technology:
-
-- **Simple universal format.** RootA is expressed using YAML, a wide-spread, easy-to-write and human-readable format.
-- **Flexibility.** Depending on your SIEM, you can rely on log sources explicitly or implicitly defined in the native query itself or in the customizable `logsource` field.
-- **Unlock the Full Power of Your SIEM and EDR.** Break through the limits of describing attack behavior by leveraging stateful logic of any sophistication, instead of a flat IOC-like string matching. This way you can assure that detection logic you build and share is harder to bypass by the attackers, is more compute efficient and can later be rendered in other languages.
-- **Empower Your Detection Engineering Skills.** To capture detection logic with RootA, you can use any query language that you already know. Initial rule is specified in the native language of your favorite SIEM, EDR or Data Lake technology.
-
-### A Journey Beyond Detection
-RootA is designed to welcome all members of cyber defence industry, maximising the use of open standards such as MITRE ATT&CK, OCSF schema and Sigma rules.
-
-- **Advanced Compatibility.** RootA syntax fully accommodates OCSF and Sigma rules as taxonomy, making it fast to learn, easy to read and share, and providing maximum compatibility for Detection Engineers.
+- RootA is expressed using **YAML**, a wide-spread, easy-to-write and human-readable format.
+- **Use any query language** for detection, Uncoder.IO will take care of the translation.
+- **Correlation support.** Equally supporting stateful and stateless detection logic, in order to make detection logic harder to bypass by the attackers, more compute efficient and future proof.
+- **Log sources** can be explicitly or implicitly defined in the native query itself or in the customizable `logsource` field.
+- RootA syntax fully accommodates **OCSF** and **Sigma rules** as taxonomy, making it fast to learn, easy to read and share, and providing maximum compatibility for Detection Engineers.
 - **Threat Actor Timeline.** While Actors change, behaviours stay the same. RootA supports an additional threat intelligence layer for CERTs, NCSCs, ISACs, MDRs, and Defence Agencies, to coordinate defence faster and with greater precision.
 - **Mapping to TTPs.** Link detection logic to related tactics, techniques, and procedures in terms of MITRE ATT&CK®. Use custom tags to make the mapping even more tailored and detailed.
 - **Response as Code.** With enough community members and industry adoption, the next step after detection is sharing the code to automate response.
