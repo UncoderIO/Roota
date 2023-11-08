@@ -446,6 +446,7 @@ Description: Functions can be used for correlation of query results, for example
 - `count()` - count of field values
 - `by` - group by field
 - `dcount` - unique field values
+
 Example: `functions: count() > 10`
 
 
