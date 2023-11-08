@@ -133,7 +133,7 @@ We are genuinely grateful to security professionals who contribute their time, e
 The contents of this repo, along with RootA specifications, are in the public domain.
 
 ## Resources & Useful Links
-[RootA.IO](https://roota.io/) - the main website page of the RootA project 
-[Uncoder.IO](https://github.com/UncoderIO/UncoderIO/) - source code for translation engine Uncoder.IO which supports RootA, Sigma and IOC packaging into specific SIEM, EDR and Data Lake query formats
-[Uncoder.IO](https://uncoder.io/) - private hosted version of Uncoder.IO since 2018, operated by SOC Prime, does not track you, does not see your code
-[RootA Discord Channel](https://tdm.socprime.com/zeptolink/5IAokHui2iWUHaB8/) - Discord channel to network with RootA enthusiasts
+- [RootA.IO](https://roota.io/) the main website page of the RootA project 
+- [Uncoder.IO](https://github.com/UncoderIO/UncoderIO/) source code for translation engine Uncoder.IO which supports RootA, Sigma and IOC packaging into specific SIEM, EDR and Data Lake query formats
+- [Uncoder.IO](https://uncoder.io/) private hosted version of Uncoder.IO since 2018, operated by SOC Prime, does not track you, does not see your code
+- [RootA Discord Channel](https://tdm.socprime.com/zeptolink/5IAokHui2iWUHaB8/) Discord channel to network with RootA enthusiasts
