@@ -1,4 +1,6 @@
-![RootA Logo](images/roota_logo_horizontal.png)
+<p align="left">
+  <img src="images/roota_logo_double.png" width="228" height="58">
+</p>
 
 # An Open-Source Language for Collective Cyber Defence
 
