@@ -14,7 +14,9 @@
   - [class](#class)
   - [date](#date)
   - [mitre-attack](#mitre-attack)
-  - [timeline](#timeline)
+  - [detection](#detection)
+    - [language](#language)
+    - [body](#body)
   - [logsource](#logsource)
     - [product](#product)
     - [log_name](#log_name)
@@ -24,15 +26,15 @@
     - [audit](#audit)
       - [source](#source)
       - [enable](#enable)
-  - [detection](#detection)
-    - [language](#language)
-    - [body](#body)
+  - [timeline](#timeline)
   - [references](#references)
   - [tags](#tags)
   - [license](#license)
   - [version](#version)
   - [uuid](#uuid)
   - [correlation](#correlation)
+    - [timeframe](#timeframe)
+    - [functions](#functions)
   - [response](#response)
 
 # Format
@@ -85,7 +87,7 @@ Required: *mandatory*
 
 Description: The name of the rule which reflects the goal and the method used in the rule.
 
-Example: name: `Possible Credential Dumping using comsvcs.dll`
+Example: `name: Possible Credential Dumping using comsvcs.dll`
 
 
 ## details
@@ -184,7 +186,7 @@ Required: *optional*
 
 Description: The date of rule creation.
 
-Example: date: `2022-10-31`
+Example: `date: 2022-10-31`
 
 
 ## mitre-attack
@@ -204,25 +206,47 @@ mitre-attack:
 ```
 
 
-## timeline
+## detection
 
-Format: 
+Required: *mandatory*
 
-```
-YYYY-MM-DD - YYYY-MM-DD: Actor1, Actor2, TLP:CLEAR
-YYYY-MM-DD: Actor1, Actor3, TLP:GREEN
-```
+Description: This section contains the fields that specify the detection logic and the language used to express it. See the specifications of the fields below.
 
-Required: *optional*
 
-Description: It has to include the name of the actor, TLP:key, and dates when the behavior described in the RootA rule was used by the Actor. On the contrary to indicators of compromise, which are Actor specific, behaviors are constant while Actor is a variable. If the TLP:key is not defined, it is perceived as TLP:CLEAR. The period can be defined with two dates (first and last seen) or with one date.
+### language
 
-Example: 
-```
-timeline:
-    2023-01-01 - 2023-03-06: Ducktail, MerlinAgent
-    2023-02-04: Lazarus
-```
+Format: `text (max 128 characters)`
+
+Required: *mandatory*
+
+Description: The field should specify the name of the SIEM/EDR/XDR in the appropriate format. See the list of supported platforms in the Possible Values section.
+
+Possible Values: 
+
+- `sentinel-kql-query` for Microsoft Sentinel Query
+- `splunk-spl-query` for Splunk Query
+- `crowdstrike-spl-query` for CrowdStrike Query
+- `elastic-lucene-query` for Elasticsearch Query
+- `opensearch-lucene-query` for AWS OpenSearch Query
+- `logscale-lql-query` for Falcon LogScale Query
+- `mde-kql-query` for Microsoft Defender for Endpoint Query
+- `qradar-aql-query` for IBM QRadar Query
+- `sigma-yml-rule` for Sigma Rule
+- `athena-sql-query` for AWS Athena Query (Security Lake)
+- `chronicle-yaral-query` for Chronicle Security Query
+  
+Example: `language: splunk-spl-query`
+
+
+### body
+
+Format: `text (max 8192 characters)`
+
+Required: *mandatory*
+
+Description: This section should contain the rule's logic. It should be a SIEM/EDR/XDR query in the native format. The query should be in one line. In case you have a multiline query, you should join lines before adding it to the RootA rule. 
+
+Example: `index=* source="WinEventLog:*" AND (Image="*.exe" OR Image="*.com")`
 
 
 ## logsource
@@ -315,47 +339,25 @@ Description: This section provides detailed instructions on how to enable the re
 Example: `enable: 'Computer Configuration -> Windows Settings -> Security Settings -> Advanced Audit Policy Configuration -> System Audit Policies -> Detailed Tracking -> Audit Process Creation'`
 
 
-## detection
+## timeline
 
-Required: *mandatory*
+Format: 
 
-Description: This section contains the fields that specify the detection logic and the language used to express it. See the specifications of the fields below.
+```
+YYYY-MM-DD - YYYY-MM-DD: Actor1, Actor2, TLP:CLEAR
+YYYY-MM-DD: Actor1, Actor3, TLP:GREEN
+```
 
+Required: *optional*
 
-### language
+Description: It has to include the name of the actor, TLP:key, and dates when the behavior described in the RootA rule was used by the Actor. On the contrary to indicators of compromise, which are Actor specific, behaviors are constant while Actor is a variable. If the TLP:key is not defined, it is perceived as TLP:CLEAR. The period can be defined with two dates (first and last seen) or with one date.
 
-Format: `text (max 128 characters)`
-
-Required: *mandatory*
-
-Description: The field should specify the name of the SIEM/EDR/XDR in the appropriate format. See the list of supported platforms in the Possible Values section.
-
-Possible Values: 
-
-- `sentinel-kql-query` for Microsoft Sentinel Query
-- `splunk-spl-query` for Splunk Query
-- `crowdstrike-spl-query` for CrowdStrike Query
-- `elastic-lucene-query` for Elasticsearch Query
-- `opensearch-lucene-query` for AWS OpenSearch Query
-- `logscale-lql-query` for Falcon LogScale Query
-- `mde-kql-query` for Microsoft Defender for Endpoint Query
-- `qradar-aql-query` for IBM QRadar Query
-- `sigma-yml-rule` for Sigma Rule
-- `athena-sql-query` for AWS Athena Query (Security Lake)
-- `chronicle-yaral-query` for Chronicle Security Query
-  
-Example: `language: splunk-spl-query`
-
-
-### body
-
-Format: `text (max 8192 characters)`
-
-Required: *mandatory*
-
-Description: This section should contain the rule's logic. It should be a SIEM/EDR/XDR query in the native format. The query should be in one line. In case you have a multiline query, you should join lines before adding it to the RootA rule. 
-
-Example: `index=* source="WinEventLog:*" AND (Image="*.exe" OR Image="*.com")`
+Example: 
+```
+timeline:
+    2023-01-01 - 2023-03-06: Ducktail, MerlinAgent
+    2023-02-04: Lazarus
+```
 
 
 ## references
@@ -411,10 +413,41 @@ Required: *optional*
 
 Description: Unique ID of the rule. UUID version 4 is recommended for use. 
 
-Example: 009a001b-1623-4320-8369-95bf0d651e8e
+Example: `uuid: 009a001b-1623-4320-8369-95bf0d651e8e`
 
 ## correlation
-Reserved for future
+Required: *optional*
+
+Description: The correlation section is responsible for the correlation of query results. 
+
+Example:
+```
+correlation: 
+    timeframe: 1m
+    functions: count() > 10
+```
+
+### timeframe
+Format: `text (8 characters)`
+
+Required: *optional*
+
+Description: A time frame for the functions, which is defined as a span of seconds (s), minutes (m), hours (h), days (d), and weeks(w). 
+
+Example: `timeframe: 1m`
+
+### functions
+Format: `text (128 characters)`
+
+Required: *optional*
+
+Description: Functions can be used for correlation of query results, for example, to trigger only in case certain thresholds of certain fields are met. This is still under development. First functions to be released:
+
+- `count()` - count of field values
+- `by` - group by field
+- `dcount` - unique field values
+Example: `functions: count() > 10`
+
 
 ## response
 Reserved for future
