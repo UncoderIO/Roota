@@ -106,7 +106,7 @@ uuid: 151fbb45-0048-497a-95ec-2fa733bb15dc
 ```
 
 ### Fields
-[This specification](https://github.com/UncoderIO/RootA/blob/main/RootA_Specification.md) includes the list of all fields that can be used to write a RootA rule.
+[RootA specification](https://github.com/UncoderIO/RootA/blob/main/RootA_Specification.md) includes the list of all fields that can be used to write a RootA rule.
 
 ## How to Contribute
 Your contribution really matters in evolving the project and helping us make the RootA language even more useful for the global cyber defender community.
