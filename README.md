@@ -35,13 +35,9 @@ RootA is designed to welcome all members of cyber defence industry, maximising t
 - **Mapping to TTPs.** Link detection logic to related tactics, techniques, and procedures in terms of MITRE ATT&CK®. Use custom tags to make the mapping even more tailored and detailed.
 - **Response as Code.** With enough community members and industry adoption, the next step after detection is sharing the code to automate response.
   
-### Community Collaboration
-- **Use Case Documentation.** Relying on the RootA language, cyber defenders can seamlessly document and share their threat research in a universal format describing the whole use case enriched with CTI, ATT&CK tagging, and other relevant fields.
-- **Knowledge Sharing.** RootA enables defenders to share vendor-agnostic use cases enriched with comprehensive metadata rather than mere detection logic to foster global information exchange among industry peers.
-- **Collective Cyber Defense.** Despite all cyber defenders having a common goal, they tend to speak different languages. To bridge this gap, we’ve created RootA, a single language for threat detection and response. 
-
 ## Writing RootA Rules
-You can start writing RootA rules in any code editor that supports YAML. We recommend using Uncoder IO which aggregates built-in RootA templates to streamline your detection engineering process. 
+You can start writing RootA rules in any code editor that supports YAML. 
+To translate RootA rules to other languages use Uncoder.IO by building it from source https://github.com/UncoderIO/UncoderIO or hosted online privately by SOC Prime since 2018 at https://uncoder.io
 
 RootA is designed with broad customization opportunities. Use the RootA minimal template if you just need to capture seamless cross-platform query translation into any SIEM, EDR, or XDR native format. Alternatively, apply full or short RootA templates to document your security use case in detail and share the research with peers. 
 
@@ -139,9 +135,7 @@ We are genuinely grateful to security professionals who contribute their time, e
 The contents of this repo, along with RootA specifications, are in the public domain.
 
 ## Resources & Useful Links
-[RootA.IO](https://roota.io/) - the main website page of the single language for threat detection & response  
+[RootA.IO](https://roota.io/) - the main website page 
 [RootA Discord Channel](https://tdm.socprime.com/zeptolink/5IAokHui2iWUHaB8/) - join Discord channel to network with RootA enthusiasts  
 [Uncoder.IO](https://uncoder.io/) - free online translation engine for RootA, Sigma, and IOC-based queries  
 [Uncoder AI](https://tdm.socprime.com/uncoder-ai) - SaaS version of Uncoder acting as advanced IDE for detection engineering  
-[SOC Prime Platform](https://tdm.socprime.com/login) - the industry-first platform for collective cyber defense  
-[About SOC Prime](https://socprime.com/) - learn more about SOC Prime and its mission 
