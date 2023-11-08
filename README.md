@@ -1,6 +1,4 @@
-<p align="center">
-  <img src="images/roota_logo.png" width: 300px; />
-</p>
+![RootA Logo](images/roota_logo_horizontal.png)
 
 # An Open-Source Language for Collective Cyber Defence
 
@@ -11,13 +9,12 @@ RootA is a public-domain language for collective cyber defense, created to make 
 - [Why RootA](#why_roota)
 - [Writing RootA Rules](#writing-roota-rules)
 - [How to Contribute](#how-to-contribute)
-- [Questions & Feedback](#questions--feedback)
 - [Maintainers](#maintainers)
 - [Credits](#credits)
 - [Licenses](#licenses)
 - [Resources & Useful Links](#resources--useful-links)
   
-## Why RootA
+## :smiling_face_with_three_hearts: Why RootA
 The objective of RootA is to accelerate the global cyber industry collaboration. With RootA acting as a wrapper, cyber defenders can take a native rule or query and augment it with metadata to automatically translate the code into other SIEM, EDR, XDR, and Data Lake languages. Inspired by success of Yara and Sigma rules, RootA is focused on a broader applicability by a larger community of defenders.
 
 - RootA is expressed using **YAML**, a wide-spread, easy-to-write and human-readable format.
@@ -29,7 +26,7 @@ The objective of RootA is to accelerate the global cyber industry collaboration.
 - **Mapping to TTPs.** Link detection logic to related tactics, techniques, and procedures in terms of MITRE ATT&CK®. Use custom tags to make the mapping even more tailored and detailed.
 - **Response as Code.** With enough community members and industry adoption, the next step after detection is sharing the code to automate response.
   
-## Writing RootA Rules
+## :mage: Writing RootA Rules
 You can start writing RootA rules in any code editor that supports YAML. 
 To translate RootA rules to other languages use Uncoder.IO by building it from source https://github.com/UncoderIO/UncoderIO or hosted online privately by SOC Prime since 2018 at https://uncoder.io
 
@@ -101,7 +98,7 @@ uuid: 151fbb45-0048-497a-95ec-2fa733bb15dc
 ### Fields
 [RootA specification](https://github.com/UncoderIO/RootA/blob/main/RootA_Specification.md) includes the list of all fields that can be used to write a RootA rule.
 
-## How to Contribute
+## :cookie: How to Contribute
 Your contribution really matters in evolving the project and helping us make the RootA language even more useful for the global cyber defender community.
 
 To submit your pull request with your ideas or suggestions for changes, take the following steps:
@@ -118,21 +115,20 @@ To submit your pull request with your ideas or suggestions for changes, take the
 
 Thank you for your contribution to the RootA project!
 
-## Maintainers
-- Roman Ranskyi
-- Alex Bredikhin
+## :smile_cat: Maintainers
+- [Roman Ranskyi](https://www.linkedin.com/in/roman-966b91b5/)
+- [Alex Bredikhin](https://www.linkedin.com/in/bredikhin/)
 - [Adam Swan](https://github.com/acalarch/)
-- Ruslan Mikhalov
+- [Ruslan Mikhalov](https://www.linkedin.com/in/rmikhalov/)
 - [Andrii Bezverkhyi](https://www.linkedin.com/in/andriimb/)
 
-
-## Credits
+## :clap: Credits
 We are genuinely grateful to security professionals who contribute their time, expertise, and creativity to evolve the RootA open-source project.
 
-## Licenses
+## :globe_with_meridians: Licenses
 The contents of this repo, along with RootA specifications, are in the public domain.
 
-## Resources & Useful Links
+## :book: Resources & Useful Links
 - [RootA.IO](https://roota.io/) the main website page of the RootA project 
 - [Uncoder.IO](https://github.com/UncoderIO/UncoderIO/) source code for translation engine Uncoder.IO which supports RootA, Sigma and IOC packaging into specific SIEM, EDR and Data Lake query formats
 - [Uncoder.IO](https://uncoder.io/) private hosted version of Uncoder.IO since 2018, operated by SOC Prime, does not track you, does not see your code
