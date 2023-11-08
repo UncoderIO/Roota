@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="images/roota_logo.png" />
+  <img src="images/roota_logo.png" width: 300px; />
 </p>
 
 # An Open-Source Language for Collective Cyber Defence
