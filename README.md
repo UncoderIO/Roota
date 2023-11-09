@@ -8,13 +8,13 @@ RootA is a public-domain language for collective cyber defense, created to make 
 
 **Table Of Contents:**
 
-- [Why RootA](#why_roota)
-- [Writing RootA Rules](#writing-roota-rules)
-- [How to Contribute](#how-to-contribute)
-- [Maintainers](#maintainers)
-- [Credits](#credits)
-- [Licenses](#licenses)
-- [Resources & Useful Links](#resources--useful-links)
+- [Why RootA](#smiling_face_with_three_hearts-why-roota)
+- [Writing RootA Rules](#mage-writing-roota-rules)
+- [How to Contribute](#cookie-how-to-contribute)
+- [Maintainers](#smile_cat-maintainers)
+- [Credits](#clap-credits)
+- [Licenses](#globe_with_meridians-licenses)
+- [Resources & Useful Links](#book-resources--useful-links)
   
 ## :smiling_face_with_three_hearts: Why RootA
 The objective of RootA is to accelerate the global cyber industry collaboration. With RootA acting as a wrapper, cyber defenders can take a native rule or query and augment it with metadata to automatically translate the code into other SIEM, EDR, XDR, and Data Lake languages. Inspired by success of Yara and Sigma rules, RootA is focused on a broader applicability by a larger community of defenders.
