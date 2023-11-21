@@ -2,9 +2,9 @@
   <img src="images/roota_logo_double.png" width="228" height="58">
 </p>
 
-# An Open-Source Language for Collective Cyber Defence
+# An Open-Source Language for Collective Cyber Defense
 
-RootA is a public-domain language for collective cyber defense, created to make threat detection, incident response, and actor attribution simple. It acts as an open-source wrapper on top of most of the existing SIEM, EDR, XDR, and Data Lake query languages. If you learn the basics of RootA, you will be able to contribute to collective defense. And if you have mastered a specific SIEM language, with RootA and Uncoder.IO you can speak them all.
+RootA is a public-domain language for collective cyber defense, created to make threat detection, incident response, and actor attribution simple. It acts as an open-source wrapper on top of most of the existing SIEM, EDR, XDR, and Data Lake query languages. If you learn the basics of RootA, you will be able to contribute to collective defense. And if you have mastered a specific SIEM language, with RootA and Uncoder IO you can speak them all.
 
 **Table Of Contents:**
 
@@ -17,25 +17,25 @@ RootA is a public-domain language for collective cyber defense, created to make 
 - [Resources & Useful Links](#book-resources--useful-links)
   
 ## :smiling_face_with_three_hearts: Why RootA
-The objective of RootA is to accelerate the global cyber industry collaboration. With RootA acting as a wrapper, cyber defenders can take a native rule or query and augment it with metadata to automatically translate the code into other SIEM, EDR, XDR, and Data Lake languages. Inspired by success of Yara and Sigma rules, RootA is focused on a broader applicability by a larger community of defenders.
+The objective of RootA is to accelerate the global cybersecurity industry collaboration. With RootA acting as a wrapper, cyber defenders can take a native rule or query and augment it with metadata to automatically translate the code into other SIEM, EDR, XDR, and Data Lake languages. Inspired by the success of Yara and Sigma rules, RootA is focused on a broader applicability by a larger community of defenders.
 
-- RootA is expressed using **YAML**, a wide-spread, easy-to-write and human-readable format.
-- **Use any query language** for detection, Uncoder.IO will take care of the translation.
-- **Correlation support.** Common correlations are supported by RootA in order to make detection logic harder to bypass by the attackers, more compute efficient and future proof.
+- RootA is expressed using **YAML**, a widely spread, easy-to-write, human-readable format.
+- **Use any query language** for detection, Uncoder IO will take care of the translation.
+- **Correlation support.** Common correlations are supported by RootA in order to make detection logic harder to bypass by the attackers, more compute efficient, and future-proof.
 - **Log sources** can be explicitly or implicitly defined in the native query itself or in the customizable `logsource` field.
 - RootA syntax fully accommodates **OCSF** and **Sigma** as taxonomy, making it fast to learn, easy to read and share, and providing maximum compatibility for Detection Engineers.
-- **Threat Actor Timeline.** While Actors change, behaviours often stay the same. RootA supports an additional threat intelligence layer for CERTs, NCSCs, ISACs, MDRs, and Defence Agencies, to coordinate defence faster and with greater precision.
+- **Threat Actor Timeline.** While Actors change, behaviors often stay the same. RootA supports an additional threat intelligence layer for CERTs, NCSCs, ISACs, MDRs, and Defence Agencies, to coordinate defense faster and with greater precision.
 - **Mapping to TTPs.** Link detection logic to related tactics, techniques, and procedures in terms of MITRE ATT&CK®. Use custom tags to make the mapping even more tailored and detailed.
 - **Response as Code.** With enough community members and industry adoption, the next step after detection is sharing the code to automate response.
   
 ## :mage: Writing RootA Rules
 You can start writing RootA rules in any code editor that supports YAML. 
-To translate RootA rules to other languages use Uncoder.IO by building it from source https://github.com/UncoderIO/UncoderIO or hosted online privately by SOC Prime since 2018 at https://uncoder.io
+To translate RootA rules to other languages use Uncoder IO by building it from the source https://github.com/UncoderIO/UncoderIO or hosted online privately by SOC Prime since 2018 at https://uncoder.io
 
 ### RootA Rule Templates
-RootA Rule format has minimal, full and extended templates.
+RootA Rule format has minimal, full, and extended templates.
 
-**Minimal** template is for keeping rules simple, requiring only a name, description, author, severity, date, MITRE ATT&CK tags, detection query in any specific language, reference and license.
+**Minimal** template is for keeping rules simple, requiring only a name, description, author, severity, date, MITRE ATT&CK tags, detection query in any specific language, reference, and license.
 
 **Full** template is for adding alerting context, threat actor campaign timeline, specific log source attributes defined based on Sigma Rules or AWS OCSF taxonomy, and cross-platform correlation section.
 
@@ -134,6 +134,6 @@ The contents of this repo, along with RootA specifications, are in the public do
 
 ## :book: Resources & Useful Links
 - [RootA.IO](https://roota.io/) the main website page of the RootA project 
-- [Uncoder.IO](https://github.com/UncoderIO/UncoderIO/) source code for translation engine Uncoder.IO which supports RootA, Sigma and IOC packaging into specific SIEM, EDR and Data Lake query formats
-- [Uncoder.IO](https://uncoder.io/) private hosted version of Uncoder.IO since 2018, operated by SOC Prime, does not track you, does not see your code
+- [Uncoder.IO](https://github.com/UncoderIO/UncoderIO/) source code for translation engine Uncoder IO which supports RootA, Sigma, and IOC packaging into specific SIEM, EDR, and Data Lake query formats
+- [Uncoder.IO](https://uncoder.io/) private hosted version of Uncoder IO since 2018, operated by SOC Prime, does not track you, does not see your code
 - [RootA Discord Channel](https://tdm.socprime.com/zeptolink/5IAokHui2iWUHaB8/) Discord channel to network with RootA enthusiasts
