@@ -1,4 +1,5 @@
-# RootA Specification
+# Roota Specification
+:earth_americas: [Українська](RootA_Specification_Ukrainian.md)
 * Version 1.0.0
 * Release date 2023-10-06
 
@@ -38,7 +39,7 @@
   - [response](#response)
 
 # Format
-RootA is structured in the YAML format
+Roota is structured in the YAML format
 
 # Structure
 ```
@@ -158,7 +159,7 @@ Possible Values:
 
 Description:
 - `Exploit Rules`
-  These are rules meant to identify the exploitation or probing of a vulnerability (e.g. CVE, General SQL-I / XSS Rules). Many of these rules would qualify as "alerts". An example would be a rule built for Log4J detection. These rules are useful indefinitely.
+  These are rules meant to identify the exploitation or probing of a vulnerability (e.g. CVE, General SQL-I / XSS Rules). Many of these rules would qualify as "alerts". An example would be a rule built for Log4j detection. These rules are useful indefinitely.
 
 - `Behavioral Rules`
   These rules are meant to identify behaviors that may match an adversary's behavior based on known reporting. Many of these rules would qualify as "queries". An example of a behavioral rule would be a rule that identifies a remote login of a local administrator account. These rules will NOT include information specific to a campaign. These rules are useful retroactively, and on average have a 12+ month expectancy of usefulness.
@@ -243,7 +244,7 @@ Format: `text (max 8192 characters)`
 
 Required: *mandatory*
 
-Description: This section should contain the rule's logic. It should be a SIEM/EDR/XDR query in the native format. The query should be in one line. In case you have a multiline query, you should join lines before adding it to the RootA rule. 
+Description: This section should contain the rule's logic. It should be a SIEM/EDR/XDR query in the native format. The query should be in one line. In case you have a multiline query, you should join lines before adding it to the Roota rule. 
 
 Example: `index=* source="WinEventLog:*" AND (Image="*.exe" OR Image="*.com")`
 
@@ -349,7 +350,7 @@ YYYY-MM-DD: Actor1, Actor3, TLP:GREEN
 
 Required: *optional*
 
-Description: It has to include the name of the actor, TLP:key, and dates when the behavior described in the RootA rule was used by the Actor. On the contrary to indicators of compromise, which are Actor specific, behaviors are constant while Actor is a variable. If the TLP:key is not defined, it is perceived as TLP:CLEAR. The period can be defined with two dates (first and last seen) or with one date.
+Description: It has to include the name of the actor, TLP:key, and dates when the behavior described in the Roota rule was used by the Actor. On the contrary to indicators of compromise, which are Actor specific, behaviors are constant while Actor is a variable. If the TLP:key is not defined, it is perceived as TLP:CLEAR. The period can be defined with two dates (first and last seen) or with one date.
 
 Example: 
 ```
@@ -380,7 +381,7 @@ Format: `text (max 1024 characters)`
 
 Required: *optional*
 
-Description: Comma-separated short words that can label RootA rule for keyword search.   
+Description: Comma-separated short words that can label Roota rule for keyword search.   
 
 Example: `tags: MerlinAgent, UAC-0173, UAC-0006, Ducktail, CERT-UA#4753`
 
