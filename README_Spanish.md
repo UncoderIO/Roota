@@ -5,7 +5,7 @@
 # Un lenguaje de código abierto para la ciberdefensa colectiva
 :earth_americas: [English](README.md) | [Українська](README_Ukrainian.md) | [Español](README_Spanish.md)  
 
-Roota es un lenguaje de dominio público para la ciberdefensa colectiva, creado para simplificar la detección de amenazas, la respuesta a incidentes y la atribución de actores. Actúa como un contenedor de código abierto sobre la mayoría de los lenguajes de consulta SIEM, EDR, XDR y Data Lake existentes. Si aprendes los conceptos básicos de Roota, podrás contribuir a una defensa colectiva. Y si dominas un idioma SIEM específico, con Roota y Uncoder IO podrás hablarlos todos.
+Roota es un lenguaje de dominio público que contribuye a la ciberdefensa colectiva, creado para simplificar la detección de amenazas, la respuesta a incidentes y la atribución de adversarios. Actúa como un contenedor de código abierto sobre la mayoría de los lenguajes de consulta SIEM, EDR, XDR y Data Lake existentes. Si aprendes los conceptos básicos de Roota, podrás contribuir a la defensa colectiva. Y si dominas un idioma SIEM específico, con RootA y Uncoder IO, podrás manejarlos todos.
 
 **Tabla de Contenidos:**
 
@@ -17,20 +17,20 @@ Roota es un lenguaje de dominio público para la ciberdefensa colectiva, creado 
 - [Licencias](#globe_with_meridians-licencias)
 - [Recursos y link útiles](#book-recursos-y-link-útiles)
   
-## :smiling_face_with_three_hearts: Porqué Roota
-El objetivo de Roota es acelerar la colaboración global de la industria de la ciberseguridad. Con Roota actuando como contenedor, los ciber defensores pueden tomar una regla o consulta nativa y aumentarla con metadatos para traducir automáticamente el código a otros lenguajes SIEM, EDR, XDR y Data Lake. Inspirado por el éxito de las reglas de Yara y Sigma, Roota se centra en una aplicabilidad más amplia por parte de una comunidad más grande de defensores.
+## :smiling_face_with_three_hearts: Por qué RootA?
+El objetivo de Roota es acelerar la colaboración global en la industria de la ciberseguridad. Con RootA actuando como contenedor, los ciber defensores pueden tomar una regla o consulta nativa y potenciarla con metadatos para traducir automáticamente el código a otros lenguajes SIEM, EDR, XDR y Data Lake. Inspirado por el éxito de las reglas de Yara y Sigma, Roota se centra en una aplicabilidad más amplia por parte de una gran comunidad de defensores.
 
 - Roota se expresa mediante **YAML**, un formato ampliamente difundido, fácil de escribir y legible por humanos.
-- **Utilice cualquier lenguaje** de consulta para la detección, Uncoder IO se encargará de la traducción.
-- **Soporte de correlación.** Roota admite correlaciones comunes para hacer que la lógica de detección sea más difícil de eludir por parte de los atacantes, más eficiente en términos de computación y preparada para el futuro.
+- **Utilice cualquier lenguaje** de consulta de detección, Uncoder IO se encargará de la traducción.
+- **Soporte de correlación.** Roota admite correlaciones comunes para hacer que la lógica de detección sea más difícil de eludir por parte de los atacantes, una alta eficiencia de procesamiento y con durabilidad a largo plazo.
 - Las **fuentes de registro** se pueden definir explícita o implícitamente en la propia consulta nativa o en el campo de fuente de registro personalizable.
 - La sintaxis de Roota se adapta completamente a **OCSF** y **Sigma** como taxonomía, lo que la hace rápida de aprender, fácil de leer y compartir, y brinda máxima compatibilidad para los ingenieros de detección.
 - **Cronología del actor de amenazas.** Si bien los actores cambian, los comportamientos suelen permanecer iguales. Roota admite una capa adicional de inteligencia sobre amenazas para CERT, NCSC, ISAC, MDR y agencias de defensa, para coordinar la defensa más rápido y con mayor precisión.
 - **Mapeo a TTP.** Vincular la lógica de detección con tácticas, técnicas y procedimientos relacionados en términos de MITRE ATT&CK®. Utilice etiquetas personalizadas para que el mapeo sea aún más personalizado y detallado.
-- **Respuesta como código.** Con suficientes miembros de la comunidad y adopción de la industria, el siguiente paso después de la detección es compartir el código para automatizar la respuesta.
+- **Respuesta como código.** Con una participación suficiente de la comunidad y una aceptación generalizada en la industria, el siguiente paso después de la detección es compartir el código para automatizar la respuesta.
   
 ## :mage: Escribir reglas Roota
-Puedes comenzar a escribir reglas Roota en cualquier editor de código que admita YAML. Para traducir las reglas de Roota a otros idiomas, utiliza Uncoder IO compilándolo desde la fuente https://github.com/UncoderIO/UncoderIO o alojado en línea de forma privada por SOC Prime desde 2018 en https://uncoder.io
+Puedes comenzar a escribir reglas Roota en cualquier editor de código que admita YAML. Para traducir las reglas de Roota a otros lenguajes, utiliza Uncoder IO compilándolo desde la fuente https://github.com/UncoderIO/UncoderIO o alojado en línea de forma privada por SOC Prime desde 2018 en https://uncoder.io
 
 ### Plantillas de reglas Roota
 El formato de regla Roota tiene plantillas mínimas, completas y extendidas.
@@ -105,15 +105,15 @@ La [especificación Roota](https://github.com/UncoderIO/RootA/blob/main/RootA_Sp
 ## :cookie: Cómo contribuir
 Tu contribución es realmente importante para hacer evolucionar el proyecto y ayudarnos a hacer que el lenguaje Roota sea aún más útil para la comunidad global de ciber defensores.
 
-Para enviar tu solicitud de extracción con tus ideas o sugerencias de cambios, sigue los siguientes pasos:
+Para enviar tu pull request con tus ideas o sugerencias de cambios, sigue los siguientes pasos:
 
-1. Bifurca el [repositorio Roota](https://github.com/UncoderIO/RootA/tree/main) y clona tu bifurcación en tu entorno local.
-2. Crea una nueva rama de funciones en la que realizará los cambios.
-3. Luego, confirma tus cambios en la rama de funciones recién creada.
-4. Empuja los cambios a tu bifurcación.
-5. Crea una nueva solicitud de extracción 
+1. Realiza un Fork del repositorio [repositorio Roota](https://github.com/UncoderIO/RootA/tree/main) y clona la misma en tu entorno local.
+2. Crea un nuevo Feature Branch en el que realizarán los cambios.
+3. Luego, confirma tus cambios en el recién creado Feature Branch.
+4. Haz un push de los cambios a tu Fork.
+5. Crea un nuevo Pull Request 
     a. Al hacer clic en el botón New Pull Request.  
-    b. Selecciona tu bifurcación junto con una rama característica.  
+    b. Selecciona tu Fork junto con tu Feature Branch.  
     c. Proporciona un título y una descripción de tus cambios. Asegúrate de que sean claros e informativos. 
     d. Finalmente, envía tu Pull Request y espera su aprobación. 
 
