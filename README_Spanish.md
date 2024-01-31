@@ -5,7 +5,7 @@
 # Un lenguaje de código abierto para la ciberdefensa colectiva
 :earth_americas: [English](README.md) | [Українська](README_Ukrainian.md) | [Español](README_Spanish.md)  
 
-Roota es un lenguaje de dominio público que contribuye a la ciberdefensa colectiva, creado para simplificar la detección de amenazas, la respuesta a incidentes y la atribución de adversarios. Actúa como un contenedor de código abierto sobre la mayoría de los lenguajes de consulta SIEM, EDR, XDR y Data Lake existentes. Si aprendes los conceptos básicos de Roota, podrás contribuir a la defensa colectiva. Y si dominas un idioma SIEM específico, con RootA y Uncoder IO, podrás manejarlos todos.
+Roota es un lenguaje de dominio público que contribuye a la ciberdefensa colectiva, creado para simplificar la detección de amenazas, la respuesta a incidentes y la atribución de adversarios. Actúa como un contenedor de código abierto sobre la mayoría de los lenguajes de consulta SIEM, EDR, XDR y Data Lake existentes. Si aprendes los conceptos básicos de Roota, podrás contribuir a la defensa colectiva. Y si dominas un idioma SIEM específico, con Roota y Uncoder IO, podrás manejarlos todos.
 
 **Tabla de Contenidos:**
 
@@ -17,8 +17,8 @@ Roota es un lenguaje de dominio público que contribuye a la ciberdefensa colect
 - [Licencias](#globe_with_meridians-licencias)
 - [Recursos y link útiles](#book-recursos-y-link-útiles)
   
-## :smiling_face_with_three_hearts: Por qué RootA?
-El objetivo de Roota es acelerar la colaboración global en la industria de la ciberseguridad. Con RootA actuando como contenedor, los ciber defensores pueden tomar una regla o consulta nativa y potenciarla con metadatos para traducir automáticamente el código a otros lenguajes SIEM, EDR, XDR y Data Lake. Inspirado por el éxito de las reglas de Yara y Sigma, Roota se centra en una aplicabilidad más amplia por parte de una gran comunidad de defensores.
+## :smiling_face_with_three_hearts: Por qué Roota?
+El objetivo de Roota es acelerar la colaboración global en la industria de la ciberseguridad. Con Roota actuando como contenedor, los ciber defensores pueden tomar una regla o consulta nativa y potenciarla con metadatos para traducir automáticamente el código a otros lenguajes SIEM, EDR, XDR y Data Lake. Inspirado por el éxito de las reglas de Yara y Sigma, Roota se centra en una aplicabilidad más amplia por parte de una gran comunidad de defensores.
 
 - Roota se expresa mediante **YAML**, un formato ampliamente difundido, fácil de escribir y legible por humanos.
 - **Utilice cualquier lenguaje** de consulta de detección, Uncoder IO se encargará de la traducción.
