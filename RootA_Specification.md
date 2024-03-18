@@ -234,6 +234,9 @@ Possible Values:
 - `qradar-aql-query` for IBM QRadar Query
 - `athena-sql-query` for AWS Athena Query (Security Lake)
 - `chronicle-yaral-query` for Chronicle Security Query
+- `fortisiem-rule` for FortiSIEM Rule
+- `axon-ads-rule` for LogRhythm Axon Rule
+- `axon-ads-query` for LogRhythm Axon Query
   
 Example: `language: splunk-spl-query`
 
