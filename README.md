@@ -72,6 +72,14 @@ date: 2020-05-24
 mitre-attack:
     - t1003.001
     - t1136.003
+tram-tags:
+    NaiveBayes:
+        - t1136.003
+    MLPClassifier:
+        - t1003.001
+    LogisticRegression:
+        - t1003
+        - t1003.005
 detection:
     language: splunk-spl-query # elastic-lucene-query, logscale-lql-query, mde-kql-query
     body: index=* ((((process="*comsvcs*") AND (process="*MiniDump*")) OR ((process="*comsvcs*") AND (process="*#24*"))) OR ((process="*comsvcs*") AND (process="*full*")))
