@@ -233,6 +233,9 @@ mitre-attack:
 - `qradar-aql-query` для IBM QRadar Query
 - `athena-sql-query` для AWS Athena Query (Security Lake)
 - `chronicle-yaral-query` для Chronicle Security Query
+- `fortisiem-rule` for FortiSIEM Rule
+- `axon-ads-rule` for LogRhythm Axon Rule
+- `axon-ads-query` for LogRhythm Axon Query
   
 Приклад: `language: splunk-spl-query`
 
