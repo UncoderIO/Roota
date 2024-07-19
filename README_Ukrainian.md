@@ -102,7 +102,7 @@ correlation:
 ```
 
 ### Поля
-[Специфікація мови Roota](https://github.com/UncoderIO/Roota/blob/main/Roota_Specification.md) описує всі поля, які можна використовувати в цій мові.
+[Специфікація мови Roota](https://github.com/UncoderIO/Roota/blob/main/Roota_Specification_Ukrainian.md) описує всі поля, які можна використовувати в цій мові.
 
 ## :cookie: Як долучитися до проєкту
 Ми вдячні кожному, хто допомагає розвивати цей проєкт і робити мову Roota більш корисною для глобальної спільноти спеціалістів з кіберзахисту.
