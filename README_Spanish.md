@@ -100,14 +100,14 @@ correlation:
 ```
 
 ### Campos
-La [especificación Roota](https://github.com/UncoderIO/RootA/blob/main/RootA_Specification.md) incluye la lista de todos los campos que se pueden utilizar para escribir una regla Roota.
+La [especificación Roota](https://github.com/UncoderIO/Roota/blob/main/Roota_Specification.md) incluye la lista de todos los campos que se pueden utilizar para escribir una regla Roota.
 
 ## :cookie: Cómo contribuir
 Tu contribución es realmente importante para hacer evolucionar el proyecto y ayudarnos a hacer que el lenguaje Roota sea aún más útil para la comunidad global de ciber defensores.
 
 Para enviar tu pull request con tus ideas o sugerencias de cambios, sigue los siguientes pasos:
 
-1. Realiza un Fork del repositorio [repositorio Roota](https://github.com/UncoderIO/RootA/tree/main) y clona la misma en tu entorno local.
+1. Realiza un Fork del repositorio [repositorio Roota](https://github.com/UncoderIO/Roota/tree/main) y clona la misma en tu entorno local.
 2. Crea un nuevo Feature Branch en el que realizarán los cambios.
 3. Luego, confirma tus cambios en el recién creado Feature Branch.
 4. Haz un push de los cambios a tu Fork.
