@@ -1,5 +1,5 @@
 # Специфікація Roota
-:earth_americas: [English](RootA_Specification.md)
+:earth_americas: [English](Roota_Specification.md)
 * Версія 1.0.0
 * Дата релізу 2023-10-06
 # Зміст
