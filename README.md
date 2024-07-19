@@ -109,14 +109,14 @@ correlation:
 ```
 
 ### Fields
-[Roota specification](https://github.com/UncoderIO/RootA/blob/main/RootA_Specification.md) includes the list of all fields that can be used to write a Roota rule.
+[Roota specification](https://github.com/UncoderIO/Roota/blob/main/Roota_Specification.md) includes the list of all fields that can be used to write a Roota rule.
 
 ## :cookie: How to Contribute
 Your contribution really matters in evolving the project and helping us make the Roota language even more useful for the global cyber defender community.
 
 To submit your pull request with your ideas or suggestions for changes, take the following steps:
 
-1. Fork the [Roota repository](https://github.com/UncoderIO/RootA/tree/main) and clone your fork to your local environment.
+1. Fork the [Roota repository](https://github.com/UncoderIO/Roota/tree/main) and clone your fork to your local environment.
 2. Create a new feature branch in which you’re going to make your changes.
 3. Then commit your changes to your newly created feature branch.
 4. Push the changes to your fork.
